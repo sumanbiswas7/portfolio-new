@@ -1,5 +1,9 @@
 import styles from "./Description.module.scss";
 import { UsedTechnologies } from "./UsedTechnologies";
+import { GoLinkExternal } from "react-icons/go";
+import { RiGithubLine } from "react-icons/ri";
+
+import Link from "next/link";
 
 export function Description() {
   return (
@@ -13,7 +17,27 @@ export function Description() {
       <UsedTechnologies
         technologies={["React Native", "Cloudinary", "Firebase"]}
       />
-      <p>show project</p>
+      <div className={styles.show_project_box}>
+        <p className={styles.show_project}>show project</p>
+        <Links />
+      </div>
+    </div>
+  );
+}
+
+function Links() {
+  return (
+    <div className={styles.links}>
+      <Link href="/">
+        <button className={styles.link_btn}>
+          <RiGithubLine className={styles.icon} size={17} />
+        </button>
+      </Link>
+      <Link href="/">
+        <button className={styles.link_btn}>
+          <GoLinkExternal className={styles.icon} size={17} />
+        </button>
+      </Link>
     </div>
   );
 }

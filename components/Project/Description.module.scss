@@ -1,3 +1,4 @@
+@import "../../styles/constants.scss";
 @import "../../styles/helpers.scss";
 
 .container {
@@ -25,7 +26,36 @@
   }
 
   // text-slow-projects
-  & > p:nth-child(4) {
-    border-bottom: 2px solid #fff;
+  .show_project_box {
+    @include flex-center;
+    .show_project {
+      margin-right: 0.5rem;
+      border-bottom: 2px solid #fff;
+    }
+  }
+  .links {
+    @include flex-center;
+    .link_btn {
+      @include flex-center;
+      border: none;
+      $size: 1.5rem;
+      width: $size;
+      height: $size;
+      background-color: #fff;
+      margin-inline: 0.25rem;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.4s;
+      &:hover {
+        background-color: $color-dark;
+        border: 1px solid #fff;
+      }
+      &:hover .icon {
+        fill: #fff;
+      }
+    }
+  }
+  .icon {
+    fill: $color-dark;
   }
 }
