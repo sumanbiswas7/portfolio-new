@@ -1,0 +1,57 @@
+@import "./constants.scss";
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+@font-face {
+  font-family: "mr-r";
+  src: url("/fonts/Manrope-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "mr-l";
+  src: url("/fonts/Manrope-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "mr-sb";
+  src: url("/fonts/Manrope-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "lato-r";
+  src: url("/fonts/Lato-Regular.ttf") format("truetype");
+}
+* {
+  box-sizing: border-box;
+  font-family: "mr-r";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: $color-dark;
+    overflow-x: hidden;
+  }
+}
+
+// scrollbar css
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333333;
+}

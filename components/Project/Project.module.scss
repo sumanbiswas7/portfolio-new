@@ -1,0 +1,53 @@
+@import "../../styles/constants.scss";
+@import "../../styles/helpers.scss";
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  .main_container {
+    width: 100vw;
+    height: 90vh;
+    display: grid;
+    place-items: center;
+  }
+  position: relative;
+}
+.content_container {
+  // background-color: greenyellow;
+  @include flex-center;
+  flex-wrap: wrap-reverse;
+  & > img {
+    width: 25vmax;
+  }
+}
+.project_name {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: $color-dark;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+}
+#animate {
+  animation-name: name-in;
+  animation-duration: 2s;
+  opacity: 0;
+}
+
+@keyframes name-in {
+  0% {
+    transform: translateX(-2rem);
+    opacity: 1;
+  }
+  40% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

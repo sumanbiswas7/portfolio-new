@@ -1,0 +1,45 @@
+@import "../../styles/constants.scss";
+@import "../../styles/helpers.scss";
+
+.circle {
+  $size: 17rem;
+  width: $size;
+  height: $size;
+
+  border-radius: 50%;
+  background-color: $color-circle;
+  border: 1px solid $color-dark;
+  transition: all 1s;
+  @include flex-center;
+  &:hover {
+    transform: translateY(1rem);
+  }
+  @media only screen and (orientation: portrait) {
+    $size: 30vmax;
+    width: $size;
+    height: $size;
+  }
+}
+
+.my_img {
+  width: 120%;
+  margin-top: -2rem;
+  transition: all 0.85s;
+
+  &:hover {
+    transform: translateY(-2rem);
+  }
+}
+
+#animate_circle {
+}
+#hide_circle {
+  opacity: 0;
+}
+
+#animate_img {
+}
+#hide_img {
+  filter: blur(5px);
+  transform: translateY(2rem);
+}

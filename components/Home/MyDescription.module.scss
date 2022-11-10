@@ -1,0 +1,68 @@
+@import "../../styles/constants.scss";
+
+#animate {
+}
+#hide {
+  opacity: 0;
+  transform: translateX(-2rem);
+}
+
+.container {
+  transition: all 0.85s;
+
+  & > .h1_large_screen {
+    font-size: 4rem;
+  }
+  & > .h1_small_screen {
+    margin-top: 0.5rem;
+    font-size: 4.5vmax;
+    display: none;
+  }
+
+  @media only screen and (orientation: portrait) {
+    & > .h1_small_screen {
+      display: block;
+    }
+    & > p {
+      font-size: 2vmax;
+    }
+    & > .h1_large_screen {
+      display: none;
+    }
+  }
+
+  & > div {
+    & > button {
+      margin-top: 0.5rem;
+      border: 2px solid;
+      border-radius: 0.4rem;
+      border-color: $color-dark;
+      padding: 0.2rem 0.65rem;
+      transition: all 0.2s;
+      @media only screen and (orientation: portrait) {
+        font-size: 1.6vmax;
+      }
+      &:nth-child(1) {
+        background-color: $color-dark;
+        margin-right: 0.2rem;
+        color: #fff;
+        @media (hover) {
+          &:hover {
+            background-color: transparent;
+            color: $color-dark;
+          }
+        }
+      }
+      &:nth-child(2) {
+        color: $color-dark;
+        background-color: transparent;
+        @media (hover) {
+          &:hover {
+            background-color: $color-dark;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
