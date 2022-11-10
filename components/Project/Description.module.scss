@@ -6,7 +6,7 @@
   @include flex-center;
   flex-direction: column;
   align-items: flex-start;
-  
+
   & > img {
     width: 6rem;
   }
@@ -19,8 +19,9 @@
 
   // text-technologies
   & > p:nth-child(3) {
-    margin-block: 1.2rem;
     border-bottom: 2px solid #fff;
+    margin-top: 1.2rem;
+    margin-bottom: 0.2rem;
   }
 
   // text-slow-projects

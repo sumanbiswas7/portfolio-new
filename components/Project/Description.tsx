@@ -1,4 +1,5 @@
 import styles from "./Description.module.scss";
+import { UsedTechnologies } from "./UsedTechnologies";
 
 export function Description() {
   return (
@@ -9,6 +10,9 @@ export function Description() {
         images, like, comment and many more...
       </p>
       <p>used technologies</p>
+      <UsedTechnologies
+        technologies={["React Native", "Cloudinary", "Firebase"]}
+      />
       <p>show project</p>
     </div>
   );
