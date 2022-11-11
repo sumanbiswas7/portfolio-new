@@ -3,6 +3,7 @@
 .container {
   display: flex;
   margin-bottom: 1rem;
+  max-width: fit-content;
   flex-wrap: wrap;
 }
 

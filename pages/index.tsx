@@ -70,10 +70,10 @@ export default function Home() {
           next="nutshell"
           imageUrl="./projects/img_moviezine.png"
           logoUrl="./projects/logo_moviezine.png"
-          link_github=""
-          link_project=""
+          link_github="https://github.com/sumanbiswas7/moviezine"
+          link_project="https://moviezine.vercel.app/"
           background="#182309"
-          techs={["React Native", "Cloudinary", "Firebase"]}
+          techs={["NextJS", "S3", "Sass", "PostgreSQL", "GraphQL"]}
           description="website where everyone can share their favourite movie recommendations and see movies recommended by others"
         />
         <Project
