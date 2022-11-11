@@ -3,7 +3,7 @@ import { FiChevronsDown } from "react-icons/fi";
 import { useRef } from "react";
 import useObserver from "../../hooks/useObserver";
 
-export function Footer() {
+export function Footer({ id }: { id: number }) {
   const circleRef = useRef<HTMLDivElement>(null);
   const [visible] = useObserver(circleRef);
 
@@ -15,7 +15,7 @@ export function Footer() {
           className={styles.circle}
           id={`${visible ? styles.animate : styles.hide}`}
         >
-          1
+          {id}
         </div>
       </div>
       <div className={styles.small_box} id={styles.small_box_2}>

@@ -3,15 +3,32 @@ import styles from "./Project.module.scss";
 import { useRef } from "react";
 import useObserver from "../../hooks/useObserver";
 import { Description } from "./Description";
-const col = "#50251c";
 
 interface Props {
   name: string;
   background: string;
-  image: string;
+  imageUrl: string;
+  logoUrl: string;
+  id: number;
+  description: string;
+  techs: string[];
+  link_project: string;
+  link_github: string;
+  imgWidth?: string;
 }
 
-export function Project() {
+export function Project({
+  name,
+  background,
+  imageUrl,
+  logoUrl,
+  description,
+  link_github,
+  link_project,
+  techs,
+  id,
+  imgWidth,
+}: Props) {
   const spanRef = useRef<HTMLSpanElement>(null);
   const [visible] = useObserver(spanRef);
 
@@ -22,20 +39,30 @@ export function Project() {
         id={`${visible ? styles.animate : styles.hide}`}
         className={styles.project_name}
       >
-        projects / vivid
+        projects / {name}
       </span>
       <div
         style={{
-          background: `linear-gradient(180deg, #262626 0%, ${col} 100%)`,
+          background: `linear-gradient(180deg, #262626 0%, ${background} 100%)`,
         }}
         className={styles.main_container}
       >
         <div className={styles.content_container}>
-          <Description />
-          <img src="./projects/img_vivid.png" alt="project-showcase.webp" />
+          <Description
+            logoUrl={logoUrl}
+            link_github={link_github}
+            link_project={link_project}
+            techs={techs}
+            description={description}
+          />
+          <img
+            style={{ width: imgWidth || "25vmax" }}
+            src={imageUrl}
+            alt="project-showcase.webp"
+          />
         </div>
       </div>
-      <Footer />
+      <Footer id={id} />
     </div>
   );
 }
