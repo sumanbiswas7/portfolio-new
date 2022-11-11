@@ -20,7 +20,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.page_container}>
-        <main className={styles.main}>
+        <main id="home" className={styles.main}>
           <nav className={styles.nav_container}>
             <NextLink href="/">
               <Image
@@ -49,7 +49,6 @@ export default function Home() {
           </div>
         </main>
 
-        <footer className={styles.footer}></footer>
         <Project
           id={1}
           name="vivid"

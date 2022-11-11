@@ -35,7 +35,7 @@ export function Project({
   const [visible] = useObserver(spanRef);
 
   return (
-    <div className={styles.main}>
+    <div id="projects" className={styles.main}>
       <span
         ref={spanRef}
         id={`${visible ? styles.animate : styles.hide}`}

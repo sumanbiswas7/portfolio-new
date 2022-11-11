@@ -1,5 +1,6 @@
 import styles from "./NavButton.module.scss";
 import { useState } from "react";
+import Link from "next/link";
 
 export function NavButton() {
   const [modal, setModal] = useState(false);
@@ -21,7 +22,16 @@ export function NavButton() {
           className={styles.bottom_line}
         ></span>
       </div>
-      {modal && <div className={styles.modal}></div>}
+      {modal && (
+        <div className={styles.modal}>
+          <Link href={"#home"}>
+            <p>Home</p>
+          </Link>
+          <Link href={"#projects"}>
+            <p>Projects</p>
+          </Link>
+        </div>
+      )}
     </>
   );
 }
