@@ -53,6 +53,7 @@ export default function Home() {
         <Project
           id={1}
           name="vivid"
+          next="moviezine"
           imageUrl="./projects/img_vivid.png"
           logoUrl="./projects/logo_vivid.png"
           link_github=""
@@ -66,6 +67,7 @@ export default function Home() {
           id={2}
           imgWidth="32vmax"
           name="moviezine"
+          next="nutshell"
           imageUrl="./projects/img_moviezine.png"
           logoUrl="./projects/logo_moviezine.png"
           link_github=""

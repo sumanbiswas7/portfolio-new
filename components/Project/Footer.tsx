@@ -3,7 +3,12 @@ import { FiChevronsDown } from "react-icons/fi";
 import { useRef } from "react";
 import useObserver from "../../hooks/useObserver";
 
-export function Footer({ id }: { id: number }) {
+interface Props {
+  id: number;
+  next?: string;
+}
+
+export function Footer({ id, next }: Props) {
   const circleRef = useRef<HTMLDivElement>(null);
   const [visible] = useObserver(circleRef);
 
@@ -19,12 +24,16 @@ export function Footer({ id }: { id: number }) {
         </div>
       </div>
       <div className={styles.small_box} id={styles.small_box_2}>
-        <NextArrow />
+        {next && <NextArrow />}
       </div>
       <div className={styles.small_box} id={styles.small_box_3}>
         <div className={styles.next_proj_box}>
-          <p>moviezine</p>
-          <FiChevronsDown />
+          {next && (
+            <>
+              <p>{next}</p>
+              <FiChevronsDown />
+            </>
+          )}
         </div>
       </div>
     </div>

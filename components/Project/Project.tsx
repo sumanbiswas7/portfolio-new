@@ -15,6 +15,7 @@ interface Props {
   link_project: string;
   link_github: string;
   imgWidth?: string;
+  next?: string;
 }
 
 export function Project({
@@ -28,6 +29,7 @@ export function Project({
   techs,
   id,
   imgWidth,
+  next,
 }: Props) {
   const spanRef = useRef<HTMLSpanElement>(null);
   const [visible] = useObserver(spanRef);
@@ -62,7 +64,7 @@ export function Project({
           />
         </div>
       </div>
-      <Footer id={id} />
+      <Footer next={next} id={id} />
     </div>
   );
 }
