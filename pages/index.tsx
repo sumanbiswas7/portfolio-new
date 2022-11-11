@@ -56,10 +56,10 @@ export default function Home() {
           next="moviezine"
           imageUrl="./projects/img_vivid.png"
           logoUrl="./projects/logo_vivid.png"
-          link_github=""
-          link_project=""
+          link_github="https://github.com/sumanbiswas7/vivid"
+          link_project="https://play.google.com/store/apps/details?id=com.suman_biswas.vivid&pli=1"
           background="#50251c"
-          techs={["React Native", "Cloudinary", "Firebase"]}
+          techs={["React Native", "Redux", "Cloudinary", "Firebase"]}
           description="vivid is a social media app for android and ios where people can share
            images, like, comment and many more..."
         />
@@ -73,7 +73,7 @@ export default function Home() {
           link_github="https://github.com/sumanbiswas7/moviezine"
           link_project="https://moviezine.vercel.app/"
           background="#182309"
-          techs={["NextJS", "S3", "Sass", "PostgreSQL", "GraphQL"]}
+          techs={["NextJS", "PostgreSQL", "AWS S3", "Sass", "GraphQL"]}
           description="website where everyone can share their favourite movie recommendations and see movies recommended by others"
         />
         <Project
@@ -83,10 +83,10 @@ export default function Home() {
           next="NFT"
           imageUrl="./projects/img_nutshell.png"
           logoUrl="./projects/logo_nutshell.png"
-          link_github=""
-          link_project=""
+          link_github="https://github.com/sumanbiswas7/nutshell-web"
+          link_project="https://nutshell-web.vercel.app/"
           background="#41260B"
-          techs={["React Native", "Cloudinary", "Firebase"]}
+          techs={["React Native", "GraphQL", "Firebase"]}
           description="The cheapest and simplest way to make your own fully customizable restaurant menu app."
         />
       </div>
