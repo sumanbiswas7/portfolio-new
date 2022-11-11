@@ -21,7 +21,7 @@
   flex-wrap: wrap-reverse;
   & > img {
     width: 25vmax;
-    margin-block: 1rem;
+    margin-block: 2rem;
     @media only screen and (max-width: $breakpoint-mid) {
     }
   }

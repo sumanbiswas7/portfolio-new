@@ -76,6 +76,19 @@ export default function Home() {
           techs={["React Native", "Cloudinary", "Firebase"]}
           description="website where everyone can share their favourite movie recommendations and see movies recommended by others"
         />
+        <Project
+          id={3}
+          imgWidth="32vmax"
+          name="nutshell"
+          next="NFT"
+          imageUrl="./projects/img_nutshell.png"
+          logoUrl="./projects/logo_nutshell.png"
+          link_github=""
+          link_project=""
+          background="#41260B"
+          techs={["React Native", "Cloudinary", "Firebase"]}
+          description="The cheapest and simplest way to make your own fully customizable restaurant menu app."
+        />
       </div>
     </div>
   );
