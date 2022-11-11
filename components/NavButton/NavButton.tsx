@@ -25,10 +25,10 @@ export function NavButton() {
       {modal && (
         <div className={styles.modal}>
           <Link href={"#home"}>
-            <p>Home</p>
+            <p className={styles.link}>Home</p>
           </Link>
           <Link href={"#projects"}>
-            <p>Projects</p>
+            <p className={styles.link}>Projects</p>
           </Link>
         </div>
       )}

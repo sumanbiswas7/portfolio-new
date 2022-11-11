@@ -16,6 +16,7 @@ interface Props {
   link_github: string;
   imgWidth?: string;
   next?: string;
+  project_id?: string;
 }
 
 export function Project({
@@ -30,12 +31,13 @@ export function Project({
   id,
   imgWidth,
   next,
+  project_id,
 }: Props) {
   const spanRef = useRef<HTMLSpanElement>(null);
   const [visible] = useObserver(spanRef);
 
   return (
-    <div id="projects" className={styles.main}>
+    <div id={project_id || "projects"} className={styles.main}>
       <span
         ref={spanRef}
         id={`${visible ? styles.animate : styles.hide}`}

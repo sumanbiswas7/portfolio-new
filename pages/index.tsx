@@ -63,6 +63,7 @@ export default function Home() {
            images, like, comment and many more..."
         />
         <Project
+          project_id="project-2"
           id={2}
           imgWidth="32vmax"
           name="moviezine"
@@ -77,6 +78,7 @@ export default function Home() {
         />
         <Project
           id={3}
+          project_id="project-3"
           imgWidth="32vmax"
           name="nutshell"
           next="NFT"
