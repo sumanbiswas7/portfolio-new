@@ -6,6 +6,7 @@
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 .main {
   background-color: $color-home-bg;

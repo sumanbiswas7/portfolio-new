@@ -81,7 +81,7 @@ export default function Home() {
           project_id="project-3"
           imgWidth="32vmax"
           name="nutshell"
-          next="NFT"
+          // next="NFT"
           imageUrl="./projects/img_nutshell.png"
           logoUrl="./projects/logo_nutshell.png"
           link_github="https://github.com/sumanbiswas7/nutshell-web"
