@@ -58,8 +58,17 @@
   right: 0;
   z-index: 6;
   animation: modal-open 0.35s;
-  padding: 1rem;
+  padding: 1.5rem;
+  padding-left: 2rem;
   border-bottom: 4px solid $color-dark;
+  & > p {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    // margin-top: 0.5rem;
+    border-bottom: 2px solid #fff;
+    width: fit-content;
+  }
 }
 
 @keyframes modal-open {
@@ -76,39 +85,3 @@
   }
 }
 
-// Navbar links
-.link_container {
-  @include flex-center;
-  justify-content: flex-start;
-  // background-color: green;
-  margin-bottom: 1rem;
-  &:hover .icon {
-    fill: #fff;
-  }
-  &:hover .icon_container {
-    background-color: $color-dark;
-    transform: translateX(0.5rem);
-  }
-  &:hover .link {
-    transform: translateX(0.5rem);
-  }
-}
-.link {
-  font-size: 1.3rem;
-  margin-left: 0.5rem;
-  color: #fff;
-  transition: all 0.3s;
-}
-.icon_container {
-  $size: 1.9rem;
-  width: $size;
-  height: $size;
-  @include flex-center;
-  border-radius: 0.5rem;
-  background-color: $color-bg;
-  fill: $color-dark;
-  transition: all 0.3s;
-}
-.icon {
-  transition: all 0.3s;
-}
