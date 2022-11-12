@@ -60,12 +60,6 @@
   animation: modal-open 0.35s;
   padding: 1rem;
   border-bottom: 4px solid $color-dark;
-
-  .link {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-    color: #fff;
-  }
 }
 
 @keyframes modal-open {
@@ -80,4 +74,41 @@
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+// Navbar links
+.link_container {
+  @include flex-center;
+  justify-content: flex-start;
+  // background-color: green;
+  margin-bottom: 1rem;
+  &:hover .icon {
+    fill: #fff;
+  }
+  &:hover .icon_container {
+    background-color: $color-dark;
+    transform: translateX(0.5rem);
+  }
+  &:hover .link {
+    transform: translateX(0.5rem);
+  }
+}
+.link {
+  font-size: 1.3rem;
+  margin-left: 0.5rem;
+  color: #fff;
+  transition: all 0.3s;
+}
+.icon_container {
+  $size: 1.9rem;
+  width: $size;
+  height: $size;
+  @include flex-center;
+  border-radius: 0.5rem;
+  background-color: $color-bg;
+  fill: $color-dark;
+  transition: all 0.3s;
+}
+.icon {
+  transition: all 0.3s;
 }
