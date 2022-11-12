@@ -8,6 +8,7 @@ import {
   AiOutlineSetting,
   AiOutlineMail,
 } from "react-icons/ai";
+import { Copyright } from "../NavModal/Copyright";
 
 export function NavButton() {
   const [modal, setModal] = useState(false);
@@ -33,6 +34,7 @@ export function NavButton() {
         <div className={styles.modal}>
           <p>Quick Links</p>
           <Links />
+          <Copyright />
         </div>
       )}
     </>
