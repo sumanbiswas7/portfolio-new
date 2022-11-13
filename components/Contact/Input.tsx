@@ -12,22 +12,18 @@ interface Props {
   className?: any;
 }
 
-export function Input({ data, title, style, className }: Props) {
+export function InputLine({ data, title, className }: Props) {
   return (
-    <div
-      id={styles.box}
-      style={style}
-      className={`${styles.input_box} ${className}`}
-    >
+    <div className={`${styles.input_box} ${className}`}>
       <Lottie animationData={data} className={styles.icon} />
-      <input placeholder={title || ""} id={styles.input} />
+      <input placeholder={title || ""} className={styles.input} />
     </div>
   );
 }
 
 export function InputArea({ data, title, className }: Props) {
   return (
-    <div className={`${styles.inputarea_box} ${styles.input_box} ${className}`}>
+    <div className={`${styles.inputarea_box} ${styles.input_box}`}>
       <Lottie
         animationData={data}
         className={`${styles.icon} ${styles.area_icon}`}
