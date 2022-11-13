@@ -4,9 +4,17 @@
 .page_container {
   @include new-page;
   @include flex-center;
+  flex-wrap: wrap-reverse;
   background-image: url("../../public/contact/background.svg");
   background-size: cover;
   background-position: center;
+}
+.main_box {
+  @include flex-center;
+  background-color: red;
+  @media only screen and (max-width: 685px) {
+    flex-direction: column-reverse;
+  }
 }
 
 .form {
@@ -22,10 +30,25 @@
     height: 85vmin;
     padding: 0.75rem;
   }
+  & > p {
+    color: $color-dark;
+    // background-color: red;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    width: 100%;
+  }
 }
 
 .row_1 {
   @include flex-center;
   width: 100%;
   gap: 0.5em;
+}
+
+.send_btn {
+  width: 100%;
+  min-height: 2.6rem;
+  border: none;
+  background-color: $color-dark;
+  color: #fff;
 }
