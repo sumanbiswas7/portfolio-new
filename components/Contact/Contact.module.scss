@@ -11,7 +11,7 @@
 }
 .main_box {
   @include flex-center;
-  background-color: red;
+  // background-color: red;
   @media only screen and (max-width: 685px) {
     flex-direction: column-reverse;
   }
