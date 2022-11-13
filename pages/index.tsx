@@ -10,6 +10,7 @@ import { SiLeetcode } from "react-icons/si";
 import { RiGithubLine } from "react-icons/ri";
 import { Link } from "../components/Home/Link";
 import NextLink from "next/link";
+import { Contact } from "../components/Contact/Contact";
 
 export default function Home() {
   return (
@@ -90,6 +91,7 @@ export default function Home() {
           techs={["React Native", "GraphQL", "Firebase"]}
           description="The cheapest and simplest way to make your own fully customizable restaurant menu app."
         />
+        <Contact />
       </div>
     </div>
   );

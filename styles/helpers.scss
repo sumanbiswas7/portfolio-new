@@ -3,3 +3,10 @@
   justify-content: center;
   align-items: center;
 }
+
+@mixin new-page {
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
+}

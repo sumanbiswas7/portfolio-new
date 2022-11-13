@@ -1,13 +1,6 @@
 import styles from "./NavButton.module.scss";
 import { useState } from "react";
-import { Links, NavLink } from "../../components/NavModal/NavLink";
-import {
-  AiOutlineHome,
-  AiOutlineFundProjectionScreen,
-  AiOutlineUser,
-  AiOutlineSetting,
-  AiOutlineMail,
-} from "react-icons/ai";
+import { Links } from "../../components/NavModal/NavLink";
 import { Copyright } from "../NavModal/Copyright";
 
 export function NavButton() {
@@ -34,7 +27,7 @@ export function NavButton() {
         <div className={styles.modal}>
           <p>Quick Links</p>
           <Links />
-          <Copyright />
+          <Copyright views={0} />
         </div>
       )}
     </>

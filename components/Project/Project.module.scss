@@ -2,10 +2,7 @@
 @import "../../styles/helpers.scss";
 
 .main {
-  width: 100vw;
-  height: 100vh;
-  scroll-snap-align: start;
-  position: relative;
+  @include new-page;
   .main_container {
     width: 100vw;
     height: 90vh;
