@@ -12,7 +12,8 @@
   background-image: url("../../public/skills/main.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  $size: 70vmin;
-  height: $size;
-  width: $size * 1.7;
+  padding-inline: 1rem;
+  $size: 120vmin;
+  width: $size;
+  height: $size * 0.6;
 }

@@ -1,11 +1,11 @@
 import styles from "./Contact.module.scss";
-import Lottie from "lottie-react";
 import name_lottie from "../../public/lotties/name.json";
 import phone_lottie from "../../public/lotties/phone.json";
 import email_lottie from "../../public/lotties/email.json";
 import message_lottie from "../../public/lotties/message.json";
 import { InputArea, InputLine } from "./Input";
 import { AddressBox } from "./AddressBox";
+
 
 export function Contact() {
   return (

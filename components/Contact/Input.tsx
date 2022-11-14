@@ -1,5 +1,5 @@
-import Lottie from "lottie-react";
 import styles from "./Input.module.scss";
+import dynamic from "next/dynamic";
 
 interface Props {
   data: any;
@@ -7,6 +7,10 @@ interface Props {
   style?: any;
   className?: any;
 }
+
+const Lottie = dynamic(() => import("lottie-react"), {
+  suspense: true,
+});
 
 export function InputLine({ data, title, className }: Props) {
   return (
