@@ -8,12 +8,10 @@
   color: #fff;
 }
 
-.main_img {
-  background-image: url("../../public/skills/main.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  padding-inline: 1rem;
-  $size: 120vmin;
-  width: $size;
-  height: $size * 0.6;
+.img {
+  width: 60vw;
+  @media only screen and (orientation: portrait) {
+    height: 60vh;
+    width: auto;
+  }
 }

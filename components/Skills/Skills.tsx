@@ -4,11 +4,13 @@ import { SkillsBox } from "./SkillsBox";
 export function Skills() {
   return (
     <div id="skills" className={styles.page_container}>
-      <div className={styles.main_img}></div>
-      {/* <SkillsBox
-        category="languages"
-        tech={["JavaScript", "TypeScript", "Python"]}
-      /> */}
+      <picture>
+        <source
+          srcSet="./skills/main_mobile.svg"
+          media="(orientation: portrait)"
+        />
+        <img className={styles.img} src="./skills/main.svg" />
+      </picture>
     </div>
   );
 }
