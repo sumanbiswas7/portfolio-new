@@ -11,6 +11,7 @@ import { RiGithubLine } from "react-icons/ri";
 import { Link } from "../components/Home/Link";
 import NextLink from "next/link";
 import { Contact } from "../components/Contact/Contact";
+import { Skills } from "../components/Skills/Skills";
 
 export default function Home() {
   return (
@@ -91,6 +92,7 @@ export default function Home() {
           techs={["React Native", "GraphQL", "Firebase"]}
           description="The cheapest and simplest way to make your own fully customizable restaurant menu app."
         />
+        <Skills />
         <Contact />
       </div>
     </div>

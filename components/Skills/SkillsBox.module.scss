@@ -1,0 +1,26 @@
+@import "../../styles/helpers.scss";
+
+.container {
+  margin: 1rem;
+  width: fit-content;
+
+  & > p {
+    padding-bottom: 0.5rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  & > ul {
+    background-color: #454545;
+    padding: 0.5rem;
+    border-radius: 0.45rem;
+    width: 100%;
+
+    & > li {
+      font-size: 0.85rem;
+      list-style-position: inside;
+      padding-left: 0.1rem;
+      padding-bottom: 0.2rem;
+    }
+  }
+}
