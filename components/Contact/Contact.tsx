@@ -6,7 +6,6 @@ import message_lottie from "../../public/lotties/message.json";
 import { InputArea, InputLine } from "./Input";
 import { AddressBox } from "./AddressBox";
 
-
 export function Contact() {
   return (
     <div id="contact" className={styles.page_container}>
