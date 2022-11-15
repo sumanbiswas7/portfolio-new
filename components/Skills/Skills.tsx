@@ -1,15 +1,14 @@
 import styles from "./Skills.module.scss";
-import { SkillsBox } from "./SkillsBox";
 
 export function Skills() {
   return (
     <div id="skills" className={styles.page_container}>
       <picture>
         <source
-          srcSet="./skills/main_mobile.svg"
+          srcSet="./skills/skills_tree-mobile.svg"
           media="(orientation: portrait)"
         />
-        <img className={styles.img} src="./skills/main.svg" />
+        <img className={styles.img} src="./skills/skills_tree.svg" />
       </picture>
     </div>
   );
