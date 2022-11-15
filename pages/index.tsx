@@ -12,6 +12,7 @@ import { Link } from "../components/Home/Link";
 import NextLink from "next/link";
 import { Contact } from "../components/Contact/Contact";
 import { Skills } from "../components/Skills/Skills";
+import { About } from "../components/About/About";
 
 export default function Home() {
   return (
@@ -50,7 +51,8 @@ export default function Home() {
             </div>
           </div>
         </main>
-
+        <About />
+        <Skills />
         <Project
           id={1}
           name="vivid"
@@ -81,10 +83,10 @@ export default function Home() {
         <Project
           id={3}
           project_id="project-3"
-          imgWidth="32vmax"
+          imgWidth="35vmax"
           name="nutshell"
           // next="NFT"
-          imageUrl="./projects/img_nutshell.png"
+          imageUrl="./projects/img_nutshell.webp"
           logoUrl="./projects/logo_nutshell.png"
           link_github="https://github.com/sumanbiswas7/nutshell-web"
           link_project="https://nutshell-web.vercel.app/"
@@ -92,7 +94,6 @@ export default function Home() {
           techs={["React Native", "GraphQL", "Firebase"]}
           description="The cheapest and simplest way to make your own fully customizable restaurant menu app."
         />
-        <Skills />
         <Contact />
       </div>
     </div>
