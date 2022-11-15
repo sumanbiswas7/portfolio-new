@@ -1,0 +1,14 @@
+@import "../../styles/constants.scss";
+
+.container {
+  & > h2 {
+    margin-bottom: 1rem;
+  }
+  & > p {
+    margin-left: 2rem;
+    max-width: 45ch;
+    @media only screen and (max-width: $breakpoint-mid-2) {
+      width: 70vw;
+    }
+  }
+}
