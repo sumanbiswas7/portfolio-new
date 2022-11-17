@@ -10,8 +10,9 @@ import { RiGithubLine } from "react-icons/ri";
 import { Link } from "./Link";
 import useViews from "../../hooks/useViews";
 
-export function Home() {
+export function HomePage() {
   const [views] = useViews();
+
   return (
     <main id="home" className={styles.main}>
       <nav className={styles.nav_container}>
