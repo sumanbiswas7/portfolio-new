@@ -13,8 +13,11 @@ import NextLink from "next/link";
 import { Contact } from "../components/Contact/Contact";
 import { Skills } from "../components/Skills/Skills";
 import { About } from "../components/About/About";
+import useViews from "../hooks/useViews";
 
 export default function Home() {
+  const [views] = useViews();
+
   return (
     <div className={styles.container}>
       <Head>
@@ -33,7 +36,7 @@ export default function Home() {
                 alt="logo.svg"
               />
             </NextLink>
-            <NavButton />
+            <NavButton views={views} />
           </nav>
           <div className={styles.home_main}>
             <MyDescription />

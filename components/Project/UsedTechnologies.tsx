@@ -26,7 +26,7 @@ export function UsedTechnologies(technologies: Props) {
         const link = linksMap[key as keyof typeof linksMap] || "#";
 
         return (
-          <Link href={link} target="_blank">
+          <Link key={tech} href={link} target="_blank">
             <div className={styles.tech}>{tech}</div>
           </Link>
         );

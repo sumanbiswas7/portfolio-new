@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Links } from "../../components/NavModal/NavLink";
 import { Copyright } from "../NavModal/Copyright";
 
-export function NavButton() {
+export function NavButton({ views }: { views?: number }) {
   const [modal, setModal] = useState(false);
   const handleModalClick = () => setModal((p) => !p);
 
@@ -27,7 +27,7 @@ export function NavButton() {
         <div className={styles.modal}>
           <p>Quick Links</p>
           <Links />
-          <Copyright views={0} />
+          <Copyright views={views} />
         </div>
       )}
     </>
