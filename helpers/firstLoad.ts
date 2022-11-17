@@ -30,7 +30,6 @@ export default function initFirstLoad() {
     }
 
     async function postSigner() {
-        fetch()
     }
 }
 
