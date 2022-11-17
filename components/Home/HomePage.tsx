@@ -1,4 +1,4 @@
-import styles from "./Home.module.scss";
+import styles from "./HomePage.module.scss";
 import NextLink from "next/link";
 import Image from "next/image";
 import { NavButton } from "../NavButton/NavButton";

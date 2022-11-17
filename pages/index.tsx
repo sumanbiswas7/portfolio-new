@@ -3,7 +3,7 @@ import styles from "../styles/Home.module.scss";
 import { Contact } from "../components/Contact/Contact";
 import { Skills } from "../components/Skills/Skills";
 import { About } from "../components/About/About";
-import { HomePage } from "../components/Home/Home";
+import { HomePage } from "../components/Home/HomePage";
 import { Projects } from "../components/Project/Projects";
 
 export default function Home() {
