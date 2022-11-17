@@ -5,7 +5,6 @@ export default function useViews() {
     const [totalViews, setTotalViews] = useState(0)
 
     useEffect(() => {
-
         getViews()
 
     }, [])

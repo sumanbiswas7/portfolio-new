@@ -1,19 +1,11 @@
 import Head from "next/head";
-import Image from "next/image";
-import { DownArrow } from "../components/DownArrow/DownArrow";
-import { MyDescription } from "../components/Home/MyDescription";
-import { MyImage } from "../components/Home/MyImage";
-import { NavButton } from "../components/NavButton/NavButton";
 import { Project } from "../components/Project/Project";
 import styles from "../styles/Home.module.scss";
-import { SiLeetcode } from "react-icons/si";
-import { RiGithubLine } from "react-icons/ri";
-import { Link } from "../components/Home/Link";
-import NextLink from "next/link";
 import { Contact } from "../components/Contact/Contact";
 import { Skills } from "../components/Skills/Skills";
 import { About } from "../components/About/About";
 import useViews from "../hooks/useViews";
+import { Home as HomePage } from "../components/Home/Home";
 
 export default function Home() {
   const [views] = useViews();
@@ -26,34 +18,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.page_container}>
-        <main id="home" className={styles.main}>
-          <nav className={styles.nav_container}>
-            <NextLink href="/">
-              <Image
-                src={"/home/logo.svg"}
-                width={45}
-                height={45}
-                alt="logo.svg"
-              />
-            </NextLink>
-            <NavButton views={views} />
-          </nav>
-          <div className={styles.home_main}>
-            <MyDescription />
-            <MyImage />
-          </div>
-          <div className={styles.home_footer}>
-            <DownArrow />
-            <div className={styles.links_container}>
-              <Link site="github" link="https://github.com/sumanbiswas7">
-                <RiGithubLine fill="#fff" size={20} />
-              </Link>
-              <Link site="leetcode" link="https://leetcode.com/sumanbiswas7/">
-                <SiLeetcode fill="#fff" />
-              </Link>
-            </div>
-          </div>
-        </main>
+        <HomePage />
         <About />
         <Skills />
         <Project
