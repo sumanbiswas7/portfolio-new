@@ -1,45 +1,29 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
+import { goOnline, get, ref, goOffline, set } from "firebase/database";
+import { database } from "../server/firebase";
 
 export default function useViews() {
     const [totalViews, setTotalViews] = useState(0)
 
     useEffect(() => {
         getViews()
-
     }, [])
 
     return [totalViews]
 
 
     async function getViews() {
-        const URL = "https://sumanbiswas-server.onrender.com/views"
-        try {
-            const res = await axios.get(URL, {
-                headers: {
-                    'Access-Control-Allow-Origin': true,
-                }
-            })
-            const views = res.data.views
-            setTotalViews(views + 1)
-            await updateViews(views)
-
-        } catch {
-            return setTotalViews(0)
-        }
+        goOnline(database)
+        const data = await get(ref(database, "/views"))
+        const views = data.val().views || 0
+        setTotalViews(views + 1)
+        updateViews(views)
     }
 
     async function updateViews(count: number) {
-        const URL = `https://sumanbiswas-server.onrender.com/views?count=${count}`
-        try {
-            await axios.post(URL, {
-                headers: {
-                    'Access-Control-Allow-Origin': true,
-                }
-            })
-        } catch {
-            return console.error("error: updating views count")
-        }
+        const intCount = parseInt(<string><unknown>count)
+        await set(ref(database, "/views"), { views: intCount + 1 })
+        goOffline(database)
     }
 }
 
