@@ -1,17 +1,19 @@
 import styles from "./HomePage.module.scss";
 import NextLink from "next/link";
 import Image from "next/image";
-import { NavButton } from "../NavButton/NavButton";
 import { MyDescription } from "./MyDescription";
 import { MyImage } from "./MyImage";
 import { DownArrow } from "../DownArrow/DownArrow";
 import { SiLeetcode } from "react-icons/si";
 import { RiGithubLine } from "react-icons/ri";
 import { Link } from "./Link";
-import useViews from "../../hooks/useViews";
+// import { NavButton } from "../NavButton/NavButton";
+import dynamic from "next/dynamic";
 
 export function HomePage() {
-  const [views] = useViews();
+  const NavButtonNoSSR = dynamic(() => import("../NavButton/NavButton"), {
+    ssr: false,
+  });
 
   return (
     <main id="home" className={styles.main}>
@@ -19,7 +21,7 @@ export function HomePage() {
         <NextLink href="/">
           <Image src={"/home/logo.svg"} width={45} height={45} alt="logo.svg" />
         </NextLink>
-        <NavButton views={views} />
+        <NavButtonNoSSR />
       </nav>
       <div className={styles.home_main}>
         <MyDescription />

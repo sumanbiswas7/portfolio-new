@@ -1,7 +1,12 @@
 import styles from "./Copyright.module.scss";
 import { AiFillEye } from "react-icons/ai";
+import useViews from "../../hooks/useViews";
 
-export function Copyright({ views }: { views?: number }) {
+interface Props {
+  views?: number;
+}
+
+export function Copyright({ views }: Props) {
   return (
     <div className={styles.container}>
       <small className={styles.copyright_text}>&copy; Suman Biswas, 2022</small>
