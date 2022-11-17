@@ -1,16 +1,14 @@
 import styles from "./NavButton.module.scss";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { Links } from "../../components/NavModal/NavLink";
 import { Copyright } from "../NavModal/Copyright";
-import useViews from "../../hooks/useViews";
 import { FirstLoadContext } from "../../pages/_app";
 import initFirstLoad from "../../helpers/firstLoad";
 
 export default function NavButton() {
   const [modal, setModal] = useState(false);
-  const [firstLoad, setFirstLoad] = useContext<any>(FirstLoadContext);
-  const init = initFirstLoad();
-  // const [views] = useViews();
+  const [firstLoad] = useContext<any>(FirstLoadContext);
+  const __ = initFirstLoad();
   const handleModalClick = () => setModal((p) => !p);
 
   return (

@@ -28,5 +28,9 @@ export default function initFirstLoad() {
         setFirstLoad(false)
         goOffline(database)
     }
+
+    async function postSigner() {
+        fetch()
+    }
 }
 
