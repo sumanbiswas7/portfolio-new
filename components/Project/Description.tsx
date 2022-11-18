@@ -10,6 +10,7 @@ interface Props {
   link_project: string;
   link_github: string;
   logoUrl: string;
+  logoWidth?: string;
 }
 
 export function Description({
@@ -18,10 +19,11 @@ export function Description({
   link_github,
   link_project,
   logoUrl,
+  logoWidth,
 }: Props) {
   return (
     <div className={styles.container}>
-      <img src={logoUrl} alt="icon.svg" />
+      <img src={logoUrl} alt="logo.png" style={{ width: logoWidth }} />
       <p className={styles.description}>{description}</p>
       <p>used technologies</p>
       <UsedTechnologies technologies={techs} />

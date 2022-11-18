@@ -7,7 +7,7 @@ export function Projects() {
         id={1}
         name="vivid"
         next="moviezine"
-        imageUrl="./projects/img_vivid.png"
+        imageUrl="./projects/img_vivid.webp"
         logoUrl="./projects/logo_vivid.png"
         link_github="https://github.com/sumanbiswas7/vivid"
         link_project="https://play.google.com/store/apps/details?id=com.suman_biswas.vivid&pli=1"
@@ -20,9 +20,10 @@ export function Projects() {
         project_id="project-2"
         id={2}
         imgWidth="32vmax"
+        logoWidth="8rem"
         name="moviezine"
         next="nutshell"
-        imageUrl="./projects/img_moviezine.png"
+        imageUrl="./projects/img_moviezine.webp"
         logoUrl="./projects/logo_moviezine.png"
         link_github="https://github.com/sumanbiswas7/moviezine"
         link_project="https://moviezine.vercel.app/"

@@ -17,6 +17,7 @@ interface Props {
   imgWidth?: string;
   next?: string;
   project_id?: string;
+  logoWidth?: string;
 }
 
 export function Project({
@@ -32,6 +33,7 @@ export function Project({
   imgWidth,
   next,
   project_id,
+  logoWidth,
 }: Props) {
   const spanRef = useRef<HTMLSpanElement>(null);
   const [visible] = useObserver(spanRef);
@@ -53,6 +55,7 @@ export function Project({
       >
         <div className={styles.content_container}>
           <Description
+            logoWidth={logoWidth}
             logoUrl={logoUrl}
             link_github={link_github}
             link_project={link_project}
