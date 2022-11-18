@@ -19,7 +19,7 @@ export function HomePage() {
     <main id="home" className={styles.main}>
       <nav className={styles.nav_container}>
         <NextLink href="/">
-          <Image src={"/home/logo.svg"} width={45} height={45} alt="logo.svg" />
+          <Image src={"/favicon.svg"} width={45} height={45} alt="logo.svg" />
         </NextLink>
         <NavButtonNoSSR />
       </nav>
