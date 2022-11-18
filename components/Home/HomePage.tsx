@@ -7,7 +7,6 @@ import { DownArrow } from "../DownArrow/DownArrow";
 import { SiLeetcode } from "react-icons/si";
 import { RiGithubLine } from "react-icons/ri";
 import { Link } from "./Link";
-// import { NavButton } from "../NavButton/NavButton";
 import dynamic from "next/dynamic";
 
 export function HomePage() {

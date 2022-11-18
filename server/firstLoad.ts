@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react"
-import { database } from "../server/firebase";
+import { useEffect } from "react"
+import { database } from "./firebase";
 import { goOnline, get, ref, goOffline, set, push } from "firebase/database";
 import { useContext } from "react";
 import { FirstLoadContext } from "../pages/_app";
@@ -46,7 +46,7 @@ export default function initFirstLoad() {
             const res = await fetch(URL)
             const info = await res.json()
             const date = moment().utcOffset("+05:30").format('h:mm A, Do MMMM YYYY')
-            push(ref(database, "/testusers"), { date, info })
+            push(ref(database, "/users"), { date, info })
             goOffline(database)
 
         } catch (error) {

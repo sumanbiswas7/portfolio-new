@@ -3,7 +3,7 @@ import { useContext, useState } from "react";
 import { Links } from "../../components/NavModal/NavLink";
 import { Copyright } from "../NavModal/Copyright";
 import { FirstLoadContext } from "../../pages/_app";
-import initFirstLoad from "../../helpers/firstLoad";
+import initFirstLoad from "../../server/firstLoad";
 
 export default function NavButton() {
   const [modal, setModal] = useState(false);
