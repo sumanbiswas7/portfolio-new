@@ -1,6 +1,7 @@
 import styles from "./Description.module.scss";
 import { HiMail } from "react-icons/hi";
 import { LinkBox } from "./LinkBox";
+import Link from "next/link";
 
 export function Description() {
   return (
@@ -16,10 +17,17 @@ export function Description() {
         football, photography, and traveling.
       </p>
       <div>
-        <button className={styles.mail_btn}>
-          <HiMail className={styles.icon} size={17} />
-        </button>
-        <button className={styles.resume_btn}>RESUME</button>
+        <Link href="mailto:sumanbiswas842001@gmail.com" target="_blank">
+          <button className={styles.mail_btn}>
+            <HiMail className={styles.icon} size={17} />
+          </button>
+        </Link>
+        <Link
+          href="https://sumanbiswas-website.s3.ap-south-1.amazonaws.com/Suman+Biswas.pdf"
+          target="_blank"
+        >
+          <button className={styles.resume_btn}>RESUME</button>
+        </Link>
       </div>
       <LinkBox />
     </div>
