@@ -7,12 +7,20 @@ $left-margin: 2rem;
   color: $color-dark;
   & > h2 {
     margin-bottom: 1rem;
+    font-size: 2rem;
+    @media only screen and (max-width: $breakpoint-mid) {
+      font-size: 1.4rem;
+    }
   }
   & > p {
     margin-left: $left-margin;
     max-width: 45ch;
+    font-size: 1.2rem;
     @media only screen and (max-width: $breakpoint-mid-2) {
       width: 70vw;
+    }
+    @media only screen and (max-width: $breakpoint-mid) {
+      font-size: 1rem;
     }
   }
 }
