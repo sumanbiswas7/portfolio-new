@@ -17,12 +17,17 @@ export function Description() {
         football, photography, and traveling.
       </p>
       <div>
-        <Link href="mailto:sumanbiswas842001@gmail.com" target="_blank">
-          <button className={styles.mail_btn}>
+        <button className={styles.mail_btn}>
+          <Link
+            className={styles.btn_box}
+            href="mailto:sumanbiswas842001@gmail.com"
+            target="_blank"
+          >
             <HiMail className={styles.icon} size={17} />
-          </button>
-        </Link>
+          </Link>
+        </button>
         <Link
+          className={styles.btn_box}
           href="https://sumanbiswas-website.s3.ap-south-1.amazonaws.com/Suman+Biswas.pdf"
           target="_blank"
         >
