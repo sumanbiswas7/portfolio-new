@@ -17,6 +17,9 @@ export function UsedTechnologies(technologies: Props) {
     awss3: "https://aws.amazon.com/s3/",
     sass: "https://sass-lang.com/",
     graphql: "https://graphql.org/",
+    ethereum: "https://ethereum.org/en/",
+    solidity: "https://docs.soliditylang.org/en/v0.8.17/",
+    nft: "https://en.wikipedia.org/wiki/Non-fungible_token",
   };
 
   return (

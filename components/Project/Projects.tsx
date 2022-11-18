@@ -36,7 +36,7 @@ export function Projects() {
         project_id="project-3"
         imgWidth="35vmax"
         name="nutshell"
-        // next="NFT"
+        next="NFT"
         imageUrl="./projects/img_nutshell.webp"
         logoUrl="./projects/logo_nutshell.png"
         link_github="https://github.com/sumanbiswas7/nutshell-web"
@@ -44,6 +44,19 @@ export function Projects() {
         background="#41260B"
         techs={["React Native", "GraphQL", "Firebase"]}
         description="The cheapest and simplest way to make your own fully customizable restaurant menu app."
+      />
+      <Project
+        id={4}
+        project_id="project-4"
+        imgWidth="24vmax"
+        name="NFT"
+        imageUrl="./projects/img_cuteshiba.webp"
+        logoUrl="./projects/logo_cuteshiba.png"
+        link_github="https://github.com/sumanbiswas7/nft-marketplace-server"
+        link_project="https://testnets.opensea.io/collection/cuteshibainu"
+        background="#103D48"
+        techs={["Ethereum", "Solidity", "NFT"]}
+        description="cute shiba inu NFT, deployed in opensea testnet. go ahead and buy some, It’s pretty darn cheap for your testnet wallet as well :)"
       />
     </>
   );
