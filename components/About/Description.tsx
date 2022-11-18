@@ -1,5 +1,6 @@
 import styles from "./Description.module.scss";
 import { HiMail } from "react-icons/hi";
+import { LinkBox } from "./LinkBox";
 
 export function Description() {
   return (
@@ -20,6 +21,7 @@ export function Description() {
         </button>
         <button className={styles.resume_btn}>RESUME</button>
       </div>
+      <LinkBox />
     </div>
   );
 }
