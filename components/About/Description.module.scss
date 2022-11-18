@@ -3,6 +3,8 @@
 
 $left-margin: 2rem;
 .container {
+  z-index: 9;
+  color: $color-dark;
   & > h2 {
     margin-bottom: 1rem;
   }
