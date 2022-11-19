@@ -10,8 +10,8 @@ import { Form } from "./Form";
 export function Contact() {
   return (
     <div id="contact" className={styles.page_container}>
-      <div className={styles.main_box}>
-        <InfoBox />
+      <InfoBox />
+      <div className={styles.form_container}>
         <Form />
       </div>
     </div>

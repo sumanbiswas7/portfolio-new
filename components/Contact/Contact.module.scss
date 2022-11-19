@@ -4,13 +4,13 @@
 .page_container {
   @include new-page;
   @include flex-center;
+  justify-content: space-between;
   background-color: #fff;
   flex-wrap: wrap;
 }
 
-.main_box {
+.form_container {
   @include flex-center;
-  gap: 2rem;
-  // padding: rem;
-  // height: 90vh;
+  height: 100vh;
+  width: 70vw;
 }

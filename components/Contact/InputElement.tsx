@@ -9,7 +9,7 @@ interface Props {
 
 export function Input({ title, style, required, area }: Props) {
   return (
-    <div className={styles.input_container}>
+    <div id={area ? styles.area : ""} className={styles.input_container}>
       <label> {required ? title + "*" : title} </label>
       {area ? (
         <textarea
