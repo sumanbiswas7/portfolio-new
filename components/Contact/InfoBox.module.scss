@@ -47,6 +47,7 @@
 .box_2 {
   width: 100%;
   height: 50%;
+  @include flex-center;
   @media only screen and (max-width: $breakpoint-mid) {
     display: none;
   }

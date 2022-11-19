@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./InputElement.module.scss";
 import dynamic from "next/dynamic";
 const Lottie = dynamic(() => import("lottie-react"), {
-  suspense: true,
+  ssr: false,
 });
 
 interface Props {

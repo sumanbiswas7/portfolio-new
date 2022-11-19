@@ -1,3 +1,4 @@
+import { Description } from "./Description";
 import styles from "./InfoBox.module.scss";
 
 export function InfoBox() {
@@ -12,7 +13,9 @@ export function InfoBox() {
           <User />
         </div>
       </div>
-      <div className={styles.box_2}></div>
+      <div className={styles.box_2}>
+        <Description />
+      </div>
     </div>
   );
 }
