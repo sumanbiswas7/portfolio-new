@@ -5,6 +5,12 @@
   @include new-page;
   @include flex-center;
   background-color: #fff;
-  gap: 1rem;
   flex-wrap: wrap;
+}
+
+.main_box {
+  @include flex-center;
+  gap: 2rem;
+  // padding: rem;
+  // height: 90vh;
 }

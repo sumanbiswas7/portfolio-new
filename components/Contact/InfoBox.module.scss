@@ -1,6 +1,9 @@
+@import "../../styles/constants.scss";
+
 .info_box {
-  background-color: grey;
-  width: 20rem;
-//   height: 80vh;
+  background-color: $color-dark;
+  width: 30vw;
+  // height: 33rem;
+  align-self: stretch;
   border-radius: 1rem;
 }

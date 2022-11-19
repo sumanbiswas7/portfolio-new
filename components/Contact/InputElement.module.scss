@@ -32,5 +32,7 @@ $color: #545454;
   & > textarea {
     resize: none;
     min-height: 15rem;
+    // align-self: stretch;
+    // justify-self: stretch;
   }
 }
