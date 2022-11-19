@@ -6,7 +6,7 @@
   height: 100vh;
   width: 30vw;
   align-self: stretch;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: $breakpoint-lg) {
     display: none;
   }
   @media only screen and (max-width: $breakpoint-mid) {
@@ -36,6 +36,7 @@
 
     & > p {
       width: 30ch;
+      font-size: 0.85rem;
     }
   }
 

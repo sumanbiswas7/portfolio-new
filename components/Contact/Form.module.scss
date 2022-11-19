@@ -13,15 +13,12 @@
   @media only screen and (max-width: $breakpoint-mid) {
     width: 100%;
     padding: 0.7rem;
-    height: 100%;
+    height: auto;
   }
 
   & > h2 {
     font-size: 1.25rem;
     margin-bottom: 1rem;
-    @media only screen and (max-width: $breakpoint-mid) {
-      display: none;
-    }
   }
 
   button {

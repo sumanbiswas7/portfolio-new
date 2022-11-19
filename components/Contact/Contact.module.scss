@@ -13,10 +13,12 @@
   @include flex-center;
   height: 100vh;
   width: 70vw;
-  @media only screen and (max-width: 800px) {
+
+  @media only screen and (max-width: $breakpoint-lg) {
     width: 100vw;
   }
   @media only screen and (max-width: $breakpoint-mid) {
-    height: 70vh;
+    align-items: flex-start;
+    margin-top: 0.5rem;
   }
 }
