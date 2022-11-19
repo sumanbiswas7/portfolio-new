@@ -1,12 +1,17 @@
 import Link from "next/link";
 import styles from "./Description.module.scss";
 import { FiMail, FiMapPin } from "react-icons/fi";
-import { BsInstagram } from "react-icons/bs";
-import { SlSocialFacebook, SlSocialLinkedin } from "react-icons/sl";
+import {
+  SlSocialFacebook,
+  SlSocialLinkedin,
+  SlSocialInstagram,
+} from "react-icons/sl";
 
 export function Description() {
   return (
     <div className={styles.desc_container}>
+      <h2>Quick Links</h2>
+
       <InfoLink
         text="hellosumanbiswas@gmail.com"
         link="mailto:sumanbiswas842001@gmail.com"
@@ -18,7 +23,7 @@ export function Description() {
       </InfoLink>
       <div className={styles.links_box}>
         <QuickLink link="https://www.instagram.com/sumanbiswas7">
-          <BsInstagram className={styles.quicklink_icon} />
+          <SlSocialInstagram className={styles.quicklink_icon} />
         </QuickLink>
         <QuickLink link="https://www.linkedin.com/in/sumanbiswas7">
           <SlSocialLinkedin className={styles.quicklink_icon} />
