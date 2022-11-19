@@ -4,13 +4,24 @@ interface Props {
   title: string;
   style?: any;
   required?: boolean;
+  area?: boolean;
 }
 
-export function Input({ title, style, required }: Props) {
+export function Input({ title, style, required, area }: Props) {
   return (
     <div className={styles.input_container}>
       <label> {required ? title + "*" : title} </label>
-      <input style={style} placeholder={`Enter your ${title.toLowerCase()}`} />
+      {area ? (
+        <textarea
+          style={style}
+          placeholder={`Enter your ${title.toLowerCase()}`}
+        />
+      ) : (
+        <input
+          style={style}
+          placeholder={`Enter your ${title.toLowerCase()}`}
+        />
+      )}
     </div>
   );
 }
