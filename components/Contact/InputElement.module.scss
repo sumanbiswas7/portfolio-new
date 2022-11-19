@@ -14,6 +14,9 @@ $color: #545454;
   align-items: flex-start;
   margin-bottom: 1rem;
   width: 100%;
+  @media only screen and (max-width: $breakpoint-mid) {
+    margin-bottom: 0.5rem;
+  }
 
   & > label {
     margin-bottom: 0.3rem;
