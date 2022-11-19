@@ -4,7 +4,7 @@ import { Input } from "./InputElement";
 export function Form() {
   return (
     <form className={styles.form}>
-      <Input title="Name" />
+      <Input title="Name" required />
     </form>
   );
 }
