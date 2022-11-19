@@ -5,11 +5,26 @@ export function InfoBox() {
     <div className={styles.info_box}>
       <div className={styles.box_1}>
         <div className={styles.quote_box}>
-          If you want to see more pictures like behind, do not forget to follow
-          me on instagram :)
+          <p>
+            If you want to see more pictures like behind, do not forget to
+            follow me on instagram :)
+          </p>
+          <User />
         </div>
       </div>
       <div className={styles.box_2}></div>
+    </div>
+  );
+}
+
+function User() {
+  return (
+    <div className={styles.user_box}>
+      <img className={styles.user_img} src="./contact/user.webp" />
+      <div>
+        <p>Suman Biswas</p>
+        <p>FrontEnd dev</p>
+      </div>
     </div>
   );
 }
