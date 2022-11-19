@@ -15,13 +15,20 @@ $color: #545454;
   margin-bottom: 1rem;
   width: 100%;
   @media only screen and (max-width: $breakpoint-mid) {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.7rem;
   }
-
-  & > label {
+  .label_cont {
+    @include flex-center;
+    & > label {
+      color: $color;
+      font-family: "mr-sb";
+    }
     margin-bottom: 0.3rem;
-    color: $color;
-    font-family: "mr-sb";
+    .lottie {
+      transform: translateY(2px);
+      width: 1rem;
+      margin-right: 0.2rem;
+    }
   }
   & > input,
   textarea {
@@ -45,6 +52,7 @@ $color: #545454;
     margin-bottom: 1rem;
     @media only screen and (max-width: $breakpoint-mid) {
       min-height: 12rem;
+      margin-bottom: 0.7rem;
     }
   }
 }
