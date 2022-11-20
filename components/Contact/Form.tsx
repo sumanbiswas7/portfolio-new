@@ -8,10 +8,19 @@ import { useRef } from "react";
 
 export function Form() {
   const nameRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
+  const phoneRef = useRef<HTMLInputElement>(null);
+  const messageRef = useRef<HTMLTextAreaElement>(null);
 
   function handleSubmit(e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault();
-    console.log(nameRef.current?.value);
+    const name = nameRef.current?.value;
+    const email = emailRef.current?.value;
+    const phone = phoneRef.current?.value;
+    const message = messageRef.current?.value;
+
+    const data = { name, email, phone, message };
+    console.log(data);
   }
 
   return (
@@ -24,10 +33,21 @@ export function Form() {
           lottie={name_lottie}
           forwardedRef={nameRef}
         />
-        <Input title="Phone" lottie={phone_lottie} />
+        <Input title="Phone" lottie={phone_lottie} forwardedRef={phoneRef} />
       </div>
-      <Input title="Email" required lottie={email_lottie} />
-      <Input title="Message" area required lottie={message_lottie} />
+      <Input
+        title="Email"
+        required
+        lottie={email_lottie}
+        forwardedRef={emailRef}
+      />
+      <Input
+        title="Message"
+        area
+        required
+        lottie={message_lottie}
+        forwardedAreaRef={messageRef}
+      />
       <button onClick={handleSubmit}>SEND</button>
     </form>
   );
