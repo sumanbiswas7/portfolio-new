@@ -7,18 +7,26 @@
   justify-content: space-between;
   background-color: #fff;
   flex-wrap: wrap;
+
+  @media only screen and (max-width: $breakpoint-mid) {
+    // flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }
 
 .form_container {
   @include flex-center;
   height: 100vh;
   width: 70vw;
+  align-self: flex-start;
 
   @media only screen and (max-width: $breakpoint-lg) {
     width: 100vw;
   }
   @media only screen and (max-width: $breakpoint-mid) {
     align-items: flex-start;
-    margin-top: 0.5rem;
+    // margin-top: 0.5rem;
+    height: auto;
   }
 }

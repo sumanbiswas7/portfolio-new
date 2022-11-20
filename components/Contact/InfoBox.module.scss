@@ -23,6 +23,8 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
     url("../../public/contact/splash_img.jpg");
   background-size: cover;
+  @media only screen and (max-width: $breakpoint-mid) {
+  }
 
   .quote_box {
     background-color: rgba($color: #353535, $alpha: 0.6);
