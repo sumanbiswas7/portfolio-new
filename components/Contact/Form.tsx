@@ -30,6 +30,7 @@ export function Form() {
         message: valid.msg,
         color: "yellow",
         icon: <BiError fill="#fff" />,
+        autoClose: 1500,
       });
   }
 
