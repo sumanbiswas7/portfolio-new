@@ -5,6 +5,7 @@ import email_lottie from "../../public/lotties/email.json";
 import message_lottie from "../../public/lotties/message.json";
 import phone_lottie from "../../public/lotties/phone.json";
 import { useRef } from "react";
+import { validate } from "../../server/validate";
 
 export function Form() {
   const nameRef = useRef<HTMLInputElement>(null);
@@ -20,7 +21,8 @@ export function Form() {
     const message = messageRef.current?.value;
 
     const data = { name, email, phone, message };
-    console.log(data);
+    const valid = validate(data);
+    console.log(valid);
   }
 
   return (
@@ -32,6 +34,7 @@ export function Form() {
           required
           lottie={name_lottie}
           forwardedRef={nameRef}
+          type="text"
         />
         <Input title="Phone" lottie={phone_lottie} forwardedRef={phoneRef} />
       </div>
@@ -40,6 +43,7 @@ export function Form() {
         required
         lottie={email_lottie}
         forwardedRef={emailRef}
+        type={"email"}
       />
       <Input
         title="Message"
@@ -48,7 +52,9 @@ export function Form() {
         lottie={message_lottie}
         forwardedAreaRef={messageRef}
       />
-      <button onClick={handleSubmit}>SEND</button>
+      <button type={"submit"} onClick={handleSubmit}>
+        SEND
+      </button>
     </form>
   );
 }

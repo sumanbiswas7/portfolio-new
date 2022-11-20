@@ -14,6 +14,7 @@ interface Props {
   forwardedRef?: React.LegacyRef<HTMLInputElement>;
   forwardedAreaRef?: React.LegacyRef<HTMLTextAreaElement>;
   handleChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  type?: string;
 }
 
 export function Input({
@@ -24,6 +25,7 @@ export function Input({
   lottie,
   forwardedRef,
   forwardedAreaRef,
+  type,
 }: Props) {
   return (
     <div id={area ? styles.area : ""} className={styles.input_container}>
@@ -42,6 +44,7 @@ export function Input({
           ref={forwardedRef}
           style={style}
           placeholder={`Enter your ${title.toLowerCase()}`}
+          type={type}
         />
       )}
     </div>
