@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styles from "./InputElement.module.scss";
 import dynamic from "next/dynamic";
 const Lottie = dynamic(() => import("lottie-react"), {
@@ -11,9 +11,19 @@ interface Props {
   required?: boolean;
   area?: boolean;
   lottie?: any;
+  forwardedRef?: React.Ref<HTMLInputElement>;
+  handleChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export function Input({ title, style, required, area, lottie }: Props) {
+export function Input({
+  title,
+  style,
+  required,
+  area,
+  lottie,
+  forwardedRef,
+  handleChange,
+}: Props) {
   return (
     <div id={area ? styles.area : ""} className={styles.input_container}>
       <div className={styles.label_cont}>
@@ -27,6 +37,8 @@ export function Input({ title, style, required, area, lottie }: Props) {
         />
       ) : (
         <input
+          onChange={handleChange}
+          ref={forwardedRef}
           style={style}
           placeholder={`Enter your ${title.toLowerCase()}`}
         />
