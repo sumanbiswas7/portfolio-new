@@ -8,6 +8,7 @@ import { useRef } from "react";
 import { validate } from "../../server/validate";
 import { showNotification } from "@mantine/notifications";
 import { BiError } from "react-icons/bi";
+import { postMail } from "../../server/postMail";
 
 export function Form() {
   const nameRef = useRef<HTMLInputElement>(null);
@@ -15,7 +16,7 @@ export function Form() {
   const phoneRef = useRef<HTMLInputElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
 
-  function handleSubmit(e: React.MouseEvent<HTMLButtonElement>) {
+  async function handleSubmit(e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault();
     const name = nameRef.current?.value;
     const email = emailRef.current?.value;
@@ -32,6 +33,8 @@ export function Form() {
         icon: <BiError fill="#fff" />,
         autoClose: 1500,
       });
+
+    await postMail();
   }
 
   return (
