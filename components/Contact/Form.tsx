@@ -6,6 +6,8 @@ import message_lottie from "../../public/lotties/message.json";
 import phone_lottie from "../../public/lotties/phone.json";
 import { useRef } from "react";
 import { validate } from "../../server/validate";
+import { showNotification } from "@mantine/notifications";
+import { BiError } from "react-icons/bi";
 
 export function Form() {
   const nameRef = useRef<HTMLInputElement>(null);
@@ -22,7 +24,13 @@ export function Form() {
 
     const data = { name, email, phone, message };
     const valid = validate(data);
-    console.log(valid);
+    if (!valid.valid)
+      return showNotification({
+        title: "Form Invalid",
+        message: valid.msg,
+        color: "yellow",
+        icon: <BiError fill="#fff" />,
+      });
   }
 
   return (
