@@ -45,7 +45,7 @@ export function Form() {
       phoneRef.current!.value = "";
       emailRef.current!.value = "";
       messageRef.current!.value = "";
-      
+
       return showNotification({
         title: "Success",
         message: "Message sent successfully",
