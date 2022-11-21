@@ -1,6 +1,6 @@
-import styles from "./Commands.module.scss";
+import styles from "./CmdComponents.module.scss";
 
-export function HelpCmd() {
+export function SkillsCmd() {
   return (
     <div className={styles.help_box}>
       <p className={styles.skills_head}>
@@ -33,3 +33,12 @@ export function HelpCmd() {
     </div>
   );
 }
+
+export function TypeHelp() {
+  return (
+    <p className={styles.typehelp}>
+      type <span>`help`</span> to get command list
+    </p>
+  );
+}
+export function HelpCmd() {}
