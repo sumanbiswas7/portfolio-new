@@ -56,12 +56,23 @@
     padding: 1rem;
     overflow-y: scroll;
 
+    & > .inp_prefix {
+      color: #4fff75;
+      font-size: 0.8rem;
+      margin-right: 0.4rem;
+      margin-top: 0.5rem;
+
+      & > span {
+        margin-left: 0.2rem;
+        color: #fff;
+      }
+    }
     & > .term_input {
       background-color: rgba(#000, 0);
       outline: none;
       border: none;
       color: #fff;
-      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
     }
   }
 }
