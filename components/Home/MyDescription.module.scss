@@ -9,6 +9,7 @@
 
 .container {
   transition: all 0.85s;
+  color: $color-dark;
 
   & > .h1_large_screen {
     font-size: 4rem;
