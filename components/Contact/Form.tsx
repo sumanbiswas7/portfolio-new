@@ -34,7 +34,7 @@ export function Form() {
         autoClose: 1500,
       });
 
-    await postMail();
+    await postMail(data);
   }
 
   return (

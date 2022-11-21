@@ -9,8 +9,9 @@ export const transporter = Nodemailer.createTransport({
 })
 
 export const mailOptions = {
-    to: "sumanbiswas842001@gmail.com",
-    subject: "GET IN TOUCH",
-    text: " Test email 1"
+    to: "hellosumanbiswas.contact@gmail.com",
+    subject: "Message from website",
+    html: `<a href='mailto:email@gmail.com'>sender@gmail.com</a>
+           <p>message</p>`,
 }
 
