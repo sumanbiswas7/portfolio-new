@@ -25,7 +25,6 @@ export default async function handler(
         <p>${req.body.message}</p>`
       }
 
-
       await transporter.sendMail(mailOptions)
       res.status(200).send({ success: true })
     } catch (error) {

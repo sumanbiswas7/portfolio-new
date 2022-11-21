@@ -29,9 +29,16 @@
     background-color: $color-dark;
     border: none;
     width: 100%;
-    padding: 0.5rem;
+    min-height: 2.3rem;
     border-radius: 0.3rem;
+    cursor: pointer;
+    font-family: "mr-r";
     color: #fff;
+    @media (hover) {
+      &:hover {
+        background-color: lighten($color: $color-dark, $amount: 2);
+      }
+    }
   }
 }
 
