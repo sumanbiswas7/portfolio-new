@@ -46,9 +46,23 @@
       height: 0.8em;
       margin-right: 0.4em;
       border-radius: 50%;
+      transition: all 0.2s;
     }
     & > .head_circle:nth-child(1) {
       margin-left: 1.5em;
+      &:hover {
+        background-color: #ff7070;
+      }
+    }
+    & > .head_circle:nth-child(2) {
+      &:hover {
+        background-color: #ffb35a;
+      }
+    }
+    & > .head_circle:nth-child(3) {
+      &:hover {
+        background-color: #7dff7a;
+      }
     }
   }
 
