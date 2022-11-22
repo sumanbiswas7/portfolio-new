@@ -67,7 +67,10 @@ export function HelpCmd() {
         redirects to specific link
       </p>
       <p>
-        <span className={styles.col_2}>clear:</span> clears the output console
+        <span className={styles.col_2}>
+          clear <span className={styles.col_4}>or</span> cls:
+        </span>{" "}
+        clears the output console
       </p>
       <p>
         <span className={styles.col_2}>exit:</span> redirects to home page
@@ -89,5 +92,14 @@ export function AboutCmd() {
         my hobbies are playing football, photography, and traveling.
       </p>
     </div>
+  );
+}
+
+export function ErrorCmd() {
+  return (
+    <p className={styles.error_cmd}>
+      <span className={styles.col_4}>Error: </span>
+      Command not recognized
+    </p>
   );
 }

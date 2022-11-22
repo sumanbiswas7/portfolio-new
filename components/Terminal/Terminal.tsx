@@ -2,6 +2,7 @@ import styles from "./Terminal.module.scss";
 import { useEffect, useRef, useState } from "react";
 import {
   AboutCmd,
+  ErrorCmd,
   HelpCmd,
   SkillsCmd,
   TypeHelp,
@@ -37,6 +38,11 @@ export function Terminal({ skillsPage }: TerminalProps) {
         setOutput(prev);
       } else if (command == "about") {
         prev.push(<AboutCmd />);
+        setOutput(prev);
+      } else if (command == "clear" || command == "cls") {
+        setOutput([<TypeHelp />]);
+      } else {
+        prev.push(<ErrorCmd />);
         setOutput(prev);
       }
       inputRef.current!.value = "";
