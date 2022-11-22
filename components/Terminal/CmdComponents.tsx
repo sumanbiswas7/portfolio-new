@@ -58,7 +58,7 @@ export function HelpCmd() {
       </p>
       <p>
         <span className={styles.col_2}>skills:</span> displays all technical
-        skill suman has
+        skills
       </p>
       <p>
         <span className={styles.col_2}>contact:</span> displays contact info
@@ -67,10 +67,16 @@ export function HelpCmd() {
         <span className={styles.col_2}>
           to --flag{" "}
           <span className={styles.col_4}>
-            (flags: [git, leet, li, ig, fb, yt]):{" "}
+            (flags: <span className={styles.col_3}>[git, leet, li, ig, fb, yt]</span>)
           </span>
         </span>
-        redirects to specific link
+        <span className={styles.col_2}>:</span> redirects to specific link
+      </p>
+      <p>
+        <span className={styles.col_2}>
+          j --<span className={styles.col_4}>page-section</span>:{" "}
+        </span>
+        jumps to the given section
       </p>
       <p>
         <span className={styles.col_2}>

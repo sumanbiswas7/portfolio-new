@@ -63,6 +63,9 @@ export function Terminal({ skillsPage }: TerminalProps) {
           );
         }
         setOutput(prev);
+      } else if (command?.includes("j--")) {
+        const link = command.substring(3);
+        router.replace(`/#${link}`);
       } else {
         prev.push(<ErrorCmd />);
         setOutput(prev);
