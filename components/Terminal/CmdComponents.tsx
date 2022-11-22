@@ -41,6 +41,7 @@ export function TypeHelp() {
     </p>
   );
 }
+
 export function HelpCmd() {
   return (
     <div className={styles.help_cmd}>
@@ -70,6 +71,22 @@ export function HelpCmd() {
       </p>
       <p>
         <span className={styles.col_2}>exit:</span> redirects to home page
+      </p>
+    </div>
+  );
+}
+
+export function AboutCmd() {
+  return (
+    <div className={styles.about_cmd}>
+      <p className={styles.skills_head}>
+        <span className={styles.col_0}>~</span> about suman
+      </p>
+      <p>
+        currently a <span className={styles.col_4}>student</span>, learning and
+        developing new skills. fuelled by a passion for making cool websites and
+        applications. proficient in technologies like ReactJS, NextJS. some of
+        my hobbies are playing football, photography, and traveling.
       </p>
     </div>
   );
