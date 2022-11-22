@@ -1,6 +1,10 @@
 import styles from "./Terminal.module.scss";
 import { useEffect, useRef, useState } from "react";
-import { SkillsCmd, TypeHelp } from "../../components/Terminal/CmdComponents";
+import {
+  HelpCmd,
+  SkillsCmd,
+  TypeHelp,
+} from "../../components/Terminal/CmdComponents";
 import { JsxElement } from "typescript";
 
 interface TerminalProps {
@@ -27,8 +31,10 @@ export function Terminal({ skillsPage }: TerminalProps) {
       if (command == "skills") {
         prev.push(<SkillsCmd />);
         setOutput(prev);
+      } else if (command == "help") {
+        prev.push(<HelpCmd />);
+        setOutput(prev);
       }
-
       inputRef.current!.value = "";
     }
   };

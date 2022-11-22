@@ -41,4 +41,28 @@ export function TypeHelp() {
     </p>
   );
 }
-export function HelpCmd() {}
+export function HelpCmd() {
+  return (
+    <div className={styles.help_cmd}>
+      <p className={styles.skills_head}>
+        <span className={styles.col_0}>~</span> command list
+      </p>
+      <p>
+        <span className={styles.col_2}>about:</span> get info about suman
+      </p>
+      <p>
+        <span className={styles.col_2}>skills:</span> get all skills he has
+      </p>
+      <p>
+        <span className={styles.col_2}>contact:</span> displays contact info
+      </p>
+      <p>
+        <span className={styles.col_2}>
+          to --li <span className={styles.col_4}>or</span> to --ig{" "}
+          <span className={styles.col_4}>or</span> to --fb:
+        </span>{" "}
+        redirects to linkedin, insta, fb
+      </p>
+    </div>
+  );
+}

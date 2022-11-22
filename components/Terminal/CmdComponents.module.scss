@@ -26,6 +26,9 @@ $color-5: #4fff75;
   color: $color-3;
 }
 .col_4 {
+  color: $color-4;
+}
+.col_5 {
   color: $color-5;
 }
 .skills_content {
@@ -39,8 +42,14 @@ $color-5: #4fff75;
 .typehelp {
   font-size: 0.8rem;
   color: #fff;
-  
+
   & > span {
     color: $color-4;
   }
+}
+
+// help component
+.help_cmd {
+  color: #fff;
+  margin-bottom: 0.5rem;
 }
