@@ -53,16 +53,39 @@
       &:hover {
         background-color: #ff7070;
       }
+      &:hover ~ #img_reveal {
+        display: block;
+        background-image: url("https://i.gifer.com/bf6.gif");
+      }
     }
     & > .head_circle:nth-child(2) {
       &:hover {
         background-color: #ffb35a;
+      }
+      &:hover ~ #img_reveal {
+        display: block;
+        background-image: url("/skills/egg-2.gif");
       }
     }
     & > .head_circle:nth-child(3) {
       &:hover {
         background-color: #7dff7a;
       }
+      &:hover ~ #img_reveal {
+        display: block;
+        background-image: url("/skills/rabbit-animated.gif");
+      }
+    }
+    #img_reveal {
+      display: none;
+      height: 5rem;
+      width: 5rem;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background-image: url("/skills/rabbit-animated.gif");
+      // background-image: url("https://tenor.com/view/cat-cats-gif-18978734");
+      background-size: cover;
     }
   }
 

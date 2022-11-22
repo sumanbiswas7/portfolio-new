@@ -81,6 +81,7 @@ export function Terminal({ skillsPage }: TerminalProps) {
           <span className={styles.head_circle}></span>
           <span className={styles.head_circle}></span>
           <span className={styles.head_circle}></span>
+          <div id={styles.img_reveal}></div>
         </div>
         <div className={styles.terminal_box_content}>
           {outPut.map((e: JsxElement) => e)}
