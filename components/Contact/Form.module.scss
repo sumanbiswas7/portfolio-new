@@ -23,6 +23,9 @@
     font-size: 1.25rem;
     margin-bottom: 0.75rem;
     color: $color-dark;
+    @media only screen and (max-width: $breakpoint-mid) {
+      display: none;
+    }
   }
 
   button {
