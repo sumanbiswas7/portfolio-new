@@ -14,6 +14,11 @@ export function SkillsCmd() {
           “JavaScript”, “TypeScript”, “Python”
           <span>
             <br />
+            <span className={styles.col_2}>data-structures:</span> "Array",
+            "Linked list", "Stack", "Queue", "Tree", "Heap"
+          </span>
+          <span>
+            <br />
             <span className={styles.col_2}>frontend:</span> “ReactJS”, “NextJS”,
             “ReactNative”, “HTML”, “Css”,
           </span>
@@ -52,7 +57,8 @@ export function HelpCmd() {
         <span className={styles.col_2}>about:</span> gets info about suman
       </p>
       <p>
-        <span className={styles.col_2}>skills:</span> displays all skills he has
+        <span className={styles.col_2}>skills:</span> displays all technical
+        skill suman has
       </p>
       <p>
         <span className={styles.col_2}>contact:</span> displays contact info
@@ -101,5 +107,22 @@ export function ErrorCmd() {
       <span className={styles.col_4}>Error: </span>
       Command not recognized
     </p>
+  );
+}
+
+export function ContactCmd() {
+  return (
+    <div className={styles.contact_cmd}>
+      <p className={styles.skills_head}>
+        <span className={styles.col_0}>~</span> contact info
+      </p>
+      <p>
+        <span className={styles.col_2}>email:</span> hellosumanbiswas@gmail.com
+      </p>
+      <p>
+        <span className={styles.col_4}>instagram</span> (@sumanbiswas7) and
+        <span className={styles.col_4}> github</span> (sumanbiswas7)
+      </p>
+    </div>
   );
 }
