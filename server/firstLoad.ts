@@ -4,6 +4,7 @@ import { goOnline, get, ref, goOffline, set, push } from "firebase/database";
 import { useContext } from "react";
 import { FirstLoadContext } from "../pages/_app";
 import moment from "moment";
+import { localSigners } from "../helpers/localSigners";
 
 export default function initFirstLoad() {
     const [firstLoad, setFirstLoad] = useContext<any>(FirstLoadContext)
@@ -46,6 +47,8 @@ export default function initFirstLoad() {
             const res = await fetch(URL)
             const info = await res.json()
             const date = moment().utcOffset("+05:30").format('h:mm A, Do MMMM YYYY')
+            const asn_provider = info?.asn?.name;
+            if (asn_provider in localSigners) return console.log("postSigner(): local signer")
             push(ref(database, "/users"), { date, info })
             goOffline(database)
 
