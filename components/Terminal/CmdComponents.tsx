@@ -9,32 +9,46 @@ export function SkillsCmd() {
       <span className={styles.col_1}>tech</span>
       <span>: &#123;</span>
       <p className={styles.skills_content}>
-        <span className={styles.col_2}>languages:</span>
+        <span className={styles.col_2}>languages: </span>
         <span className={styles.col_3}>
-          “JavaScript”, “TypeScript”, “Python”
-          <span>
+          <span className={styles.col_4}>&#91;</span>“JavaScript”, “TypeScript”,
+          “Python”
+          <span className={styles.col_4}>&#93;</span>,
+          <p className={styles.col_2}>
+            core: <span className={styles.col_4}>&#91;</span>
+            <span className={styles.col_3}>
+              "data-structures", "algorithms"
+            </span>
+            <span className={styles.col_4}>&#93;</span>
+            <span className={styles.col_3}>,</span>
+          </p>
+          {/* <span>
             <br />
-            <span className={styles.col_2}>data-structures:</span> "Array",
-            "Linked list", "Stack", "Queue", "Tree", "Heap"
+            <span className={styles.col_2}>data-structures: </span>
+            "Array", "Linked list", "Stack", "Queue", "Tree", "Heap"
+          </span> */}
+          <span>
+            <span className={styles.col_2}>frontend: </span>
+            <span className={styles.col_4}>&#91;</span>“ReactJS”, “NextJS”,
+            “ReactNative”, “HTML”, “Css”
+            <span className={styles.col_4}>&#93;</span>,
           </span>
           <span>
             <br />
-            <span className={styles.col_2}>frontend:</span> “ReactJS”, “NextJS”,
-            “ReactNative”, “HTML”, “Css”,
+            <span className={styles.col_2}>backend && tools: </span>
+            <span className={styles.col_4}>&#91;</span>
+            “NodeJS”, “GraphQL”, “Prisma”, “Sass”
+            <span className={styles.col_4}>&#93;</span>,
           </span>
           <span>
             <br />
-            <span className={styles.col_2}>backend && tools:</span>
-            “NodeJS”, “GraphQL”, “Prisma”, “Sass”,
-          </span>
-          <span>
-            <br />
-            <span className={styles.col_2}>web3:</span>
-            “Solidity”, “Ethereum”
+            <span className={styles.col_2}>web3: </span>
+            <span className={styles.col_4}>&#91;</span>
+            “Solidity”, “Ethereum”<span className={styles.col_4}>&#93;</span>
           </span>
         </span>
       </p>
-      <span>&#125;</span>
+      <span>&#125;</span>;
     </div>
   );
 }
@@ -67,7 +81,8 @@ export function HelpCmd() {
         <span className={styles.col_2}>
           to --flag{" "}
           <span className={styles.col_4}>
-            (flags: <span className={styles.col_3}>[git, leet, li, ig, fb, yt]</span>)
+            (flags:{" "}
+            <span className={styles.col_3}>[git, leet, li, ig, fb, yt]</span>)
           </span>
         </span>
         <span className={styles.col_2}>:</span> redirects to specific link
