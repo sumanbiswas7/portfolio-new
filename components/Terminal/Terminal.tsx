@@ -33,7 +33,7 @@ export function Terminal({ skillsPage }: TerminalProps) {
       setFirstLoad(false);
       const command = inputRef.current?.value.toLowerCase().replace(" ", "");
       const prev = [...outPut];
-      prev.push(<InputCmd cmd={command} />);
+      prev.push(<InputCmd cmd={command} fancyFocus />);
 
       // Command Lists
       if (command == "skills") {
@@ -97,10 +97,11 @@ interface InputCmdProps {
   cmd?: string;
   handleEnter?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
   cmdRef?: React.LegacyRef<HTMLInputElement>;
+  fancyFocus?: boolean;
 }
 
-function InputCmd({ cmd, handleEnter, cmdRef }: InputCmdProps) {
-  const [focus, setFocus] = useState(false);
+function InputCmd({ cmd, handleEnter, cmdRef, fancyFocus }: InputCmdProps) {
+  const [focus, setFocus] = useState(fancyFocus || false);
   function handleOnFocus(e: React.FocusEvent<HTMLInputElement>) {
     setFocus(true);
   }
