@@ -24,10 +24,6 @@ export function Terminal({ skillsPage }: TerminalProps) {
   useEffect(() => {
     if (skillsPage) setOutput([<SkillsCmd />]);
     // inputRef.current?.focus();
-    window.addEventListener("scroll", (e) => {
-      console.log(e);
-      console.log(window.scrollY);
-    });
   }, []);
 
   const focusInput = () => inputRef.current?.focus();

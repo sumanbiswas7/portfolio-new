@@ -3,7 +3,6 @@
 
 .form {
   background-color: #fff;
-  // background-color: green;
   width: 80%;
   padding: 1rem 7rem;
   @include flex-center;
@@ -16,9 +15,8 @@
   @media only screen and (max-width: $breakpoint-mid) {
     width: 100%;
     padding: 0.7rem;
-    height: auto;
+    min-height: 60vh;
     @media only screen and (min-height: 715px) {
-      margin-top: -6vh;
     }
   }
 
