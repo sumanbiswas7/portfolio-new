@@ -5,7 +5,6 @@ import { HomePage } from "../components/Home/HomePage";
 import { Projects } from "../components/Project/Projects";
 import dynamic from "next/dynamic";
 import { Terminal } from "../components/Terminal/Terminal";
-
 const ContactNoSSR = dynamic(() => import("../components/Contact/Contact"), {
   ssr: false,
 });

@@ -8,7 +8,17 @@ export function InfoBox() {
         <div className={styles.quote_box}>
           <p>
             If you want to see more pictures like behind, do not forget to
-            follow me on instagram :)
+            follow me on{" "}
+            <span>
+              <a
+                href="https://www.instagram.com/sumanbiswas7"
+                className={styles.ig}
+                target={"_blank"}
+              >
+                instagram
+              </a>
+            </span>{" "}
+            :)
           </p>
           <User />
         </div>

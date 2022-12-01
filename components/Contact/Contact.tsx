@@ -10,9 +10,7 @@ export default function Contact() {
       <NotificationsProvider>
         <div id="contact" className={styles.page_container}>
           <InfoBox />
-          <div className={styles.form_container}>
-            <Form />
-          </div>
+          <Form />
         </div>
       </NotificationsProvider>
     </MantineProvider>
