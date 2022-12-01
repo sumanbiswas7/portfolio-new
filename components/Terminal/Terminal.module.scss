@@ -102,12 +102,45 @@
       font-size: 0.8rem;
       margin-right: 0.4rem;
       margin-top: 0.5rem;
+      position: relative;
 
       & > span {
         margin-left: 0.2rem;
         color: #fff;
       }
     }
+    
+    #nodollar {
+      &::before {
+        display: none;
+      }
+    }
+    #dollar {
+      position: relative;
+      &::before {
+        content: "";
+        width: 1px;
+        height: 0.95rem;
+        background-color: #fff;
+        top: 2px;
+        right: -0.5rem;
+        position: absolute;
+        animation: blink 1s infinite;
+        transition: none;
+      }
+    }
+    @keyframes blink {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
     & > .term_input {
       background-color: rgba(#000, 0);
       outline: none;

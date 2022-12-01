@@ -100,12 +100,19 @@ interface InputCmdProps {
 }
 
 function InputCmd({ cmd, handleEnter, cmdRef }: InputCmdProps) {
+  const [focus, setFocus] = useState(false);
+  function handleOnFocus(e: React.FocusEvent<HTMLInputElement>) {
+    setFocus(true);
+  }
+
   return (
     <>
       <label className={styles.inp_prefix}>
-        suman@terminal<span>$</span>
+        suman@terminal
+        <span id={!focus ? styles.dollar : styles.nodollar}>$</span>
       </label>
       <input
+        onFocus={handleOnFocus}
         onKeyDown={handleEnter}
         ref={cmdRef}
         className={styles.term_input}
