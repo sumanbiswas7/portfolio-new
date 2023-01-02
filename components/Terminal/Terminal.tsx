@@ -23,7 +23,6 @@ export function Terminal({ skillsPage }: TerminalProps) {
 
   useEffect(() => {
     if (skillsPage) setOutput([<SkillsCmd />]);
-    // inputRef.current?.focus();
   }, []);
 
   const focusInput = () => inputRef.current?.focus();

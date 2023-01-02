@@ -16,9 +16,10 @@
   // background-color: greenyellow;
   @include flex-center;
   flex-wrap: wrap-reverse;
+  gap: 2rem;
   & > img {
     width: 25vmax;
-    margin-block: 2.5rem;
+    // margin-block: 2.5rem;
   }
 }
 .project_name {

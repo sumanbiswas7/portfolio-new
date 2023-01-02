@@ -20,6 +20,11 @@ export function UsedTechnologies(technologies: Props) {
     ethereum: "https://ethereum.org/en/",
     solidity: "https://docs.soliditylang.org/en/v0.8.17/",
     nft: "https://en.wikipedia.org/wiki/Non-fungible_token",
+    storybook: "https://storybook.js.org/",
+    npm: "https://www.npmjs.com/",
+    rollup: "https://rollupjs.org/",
+    webpack: "https://webpack.js.org/",
+    typescript: "https://www.typescriptlang.org/",
   };
 
   return (
