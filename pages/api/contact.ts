@@ -27,8 +27,8 @@ export default async function handler(
 
       await transporter.sendMail(mailOptions)
       res.status(200).send({ success: true })
-    } catch (error) {
-      console.log(error)
+    } catch (err) {
+      console.log(err)
       res.status(400).send({ success: false })
     }
 

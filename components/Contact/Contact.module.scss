@@ -6,6 +6,8 @@
   @include flex-center;
   justify-content: space-between;
   background-color: #fff;
+  min-height: 100vh;
+  max-height: 100vh;
   // flex-wrap: wrap;
 
   @media only screen and (max-width: $breakpoint-lg) {
