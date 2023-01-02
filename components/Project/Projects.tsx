@@ -6,7 +6,7 @@ export function Projects() {
       <Project
         id={1}
         name="vivid"
-        next="moviezine"
+        next="slick"
         imageUrl="./projects/img_vivid.webp"
         logoUrl="./projects/logo_vivid.png"
         link_github="https://github.com/sumanbiswas7/vivid"
