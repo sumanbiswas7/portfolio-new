@@ -1,34 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Welcome to my Portfolio Website
+
+This website is my personal portfolio, built using Next.js, a framework for building server-rendered React applications. Here you can find an overview of my past and current projects, as well as information about me and my background.
+
+## Features
+
+- Projects: View a list of all my past and current projects, including links to view them and read more about the technologies used.
+- About me: Learn more about me and my background, including my education and work experience.
+- Contact: Get in touch with me using the contact form or my provided contact information.
 
 ## Getting Started
 
-First, run the development server:
+To run the website locally, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+1. Clone the repository: `git clone https://github.com/sumanbiswas7/sumanbiswas.git`
+2. Install dependencies: `npm install or yarn install`
+3. Start the development server: npm run dev or yarn dev
+4. Open http://localhost:3000 to view the website in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+This website is deployed on Vercel.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Built With
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- [Next.js](https://nextjs.org/) - The web framework used
+- [React](https://reactjs.org/) - JavaScript library for building user interfaces
+- [TypeScript](https://www.typescriptlang.org/) - JavaScript but more
+- [Vercel](https://vercel.com/) - Used for deployment
 
-## Learn More
+## Contact
 
-To learn more about Next.js, take a look at the following resources:
+You can reach me at hellosumanbiswas@email.com and also you can follow me on [LinkedIn](https://www.linkedin.com/in/sumanbiswas7) and [Instagram](https://www.instagram.com/sumanbiswas7)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Acknowledgments
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Open Source Community for their valuable resources.
+Thank you for visiting my portfolio website! I hope you find it informative and interesting.
