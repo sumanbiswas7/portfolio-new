@@ -65,7 +65,7 @@ export function Projects() {
         project_id="project-5"
         imgWidth="35vmax"
         name="nutshell"
-        next="NFT"
+        // next="NFT"
         imageUrl="./projects/img_nutshell.webp"
         logoUrl="./projects/logo_nutshell.png"
         link_github="https://github.com/sumanbiswas7/nutshell-web"
