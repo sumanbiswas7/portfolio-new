@@ -36,7 +36,7 @@ export function Projects() {
         imgWidth="32vmax"
         logoWidth="7rem"
         name="lightjs"
-        next="moviezine"
+        next="cinematic"
         imageUrl="./projects/img_light.png"
         logoUrl="./projects/logo_light.svg"
         link_github="https://github.com/sumanbiswas7/lightjs"
@@ -50,15 +50,15 @@ export function Projects() {
         id={4}
         imgWidth="32vmax"
         logoWidth="8rem"
-        name="moviezine"
+        name="cinematic"
         next="nutshell"
-        imageUrl="./projects/img_moviezine.webp"
-        logoUrl="./projects/logo_moviezine.png"
-        link_github="https://github.com/sumanbiswas7/moviezine"
-        link_project="https://moviezine.vercel.app/"
-        background="#182309"
-        techs={["NextJS", "PostgreSQL", "AWS S3", "Sass", "GraphQL"]}
-        description="website where everyone can share their favourite movie recommendations and see movies recommended by others"
+        imageUrl="./projects/img_cinematic.webp"
+        logoUrl="./projects/logo_cinematic.svg"
+        link_github="https://github.com/sumanbiswas7/cinematic"
+        link_project="https://cinematic-web.vercel.app/"
+        background="#87262C"
+        techs={["NextJS", "PostgreSQL", "AWS", "Sass", "GraphQL"]}
+        description="A platform that provides movie lovers with an immersive experience to discover, share, and indulge in their favorite movies"
       />
       <Project
         id={5}

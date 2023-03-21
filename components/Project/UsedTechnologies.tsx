@@ -14,6 +14,7 @@ export function UsedTechnologies(technologies: Props) {
     firebase: "https://firebase.google.com/",
     nextjs: "https://nextjs.org/",
     postgresql: "https://www.postgresql.org/",
+    aws: "https://aws.amazon.com",
     awss3: "https://aws.amazon.com/s3/",
     sass: "https://sass-lang.com/",
     graphql: "https://graphql.org/",
