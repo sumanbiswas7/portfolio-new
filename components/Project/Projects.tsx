@@ -6,7 +6,7 @@ export function Projects() {
       <Project
         id={1}
         name="vivid"
-        next="slick"
+        next="poshkit"
         imageUrl="./projects/img_vivid.webp"
         logoUrl="./projects/logo_vivid.png"
         link_github="https://github.com/sumanbiswas7/vivid"
@@ -20,15 +20,15 @@ export function Projects() {
         project_id="project-2"
         id={2}
         logoWidth="8rem"
-        name="slick"
+        name="poshkit"
         next="lightjs"
-        imageUrl="./projects/img_slick.webp"
-        logoUrl="./projects/logo_slick.webp"
-        link_github="https://github.com/sumanbiswas7/slick"
-        link_project="https://www.npmjs.com/package/sumanbiswas-slick"
-        background="#281D5C"
+        imageUrl="./projects/img_poshkit.webp"
+        logoUrl="./projects/logo_poshkit.png"
+        link_github="https://github.com/sumanbiswas7/poshkit"
+        link_project="https://www.npmjs.com/package/poshkit"
+        background="#005732"
         techs={["Rollup", "Storybook", "NPM", "React"]}
-        description="Slick is a React components library that includes a list of React components, ready-to-use, free forever, and with accessibility always in mind."
+        description="A collection of modern, fancy components with amazing hover effects for React applications. Easily add stylish and interactive UI elements to your web applications without spending hours on custom styling and animation."
       />
       <Project
         project_id="project-3"
