@@ -74,7 +74,7 @@ export function Projects() {
         techs={["React Native", "GraphQL", "Firebase"]}
         description="The cheapest and simplest way to make your own fully customizable restaurant menu app."
       />
-      <Project
+      {/* <Project
         id={6}
         project_id="project-6"
         imgWidth="24vmax"
@@ -86,7 +86,7 @@ export function Projects() {
         background="#103D48"
         techs={["Ethereum", "Solidity", "NFT"]}
         description="cute shiba inu NFT, deployed in opensea testnet. go ahead and buy some, It’s pretty darn cheap for your testnet wallet as well :)"
-      />
+      /> */}
     </>
   );
 }
