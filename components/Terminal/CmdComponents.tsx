@@ -14,6 +14,11 @@ export function SkillsCmd() {
           <span className={styles.col_4}>&#91;</span>“JavaScript”, “TypeScript”,
           “Python”
           <span className={styles.col_4}>&#93;</span>,
+          {/*
+           * ---------------
+           *      Core
+           * ---------------
+           */}
           <p className={styles.col_2}>
             core: <span className={styles.col_4}>&#91;</span>
             <span className={styles.col_3}>
@@ -27,24 +32,51 @@ export function SkillsCmd() {
             <span className={styles.col_2}>data-structures: </span>
             "Array", "Linked list", "Stack", "Queue", "Tree", "Heap"
           </span> */}
+          {/*
+           * ----------------
+           *     Frontend
+           * ----------------
+           */}
           <span>
             <span className={styles.col_2}>frontend: </span>
             <span className={styles.col_4}>&#91;</span>“ReactJS”, “NextJS”,
-            “ReactNative”, “HTML”, “Css”
+            “ReactNative”, “HTML”, “Css”, “Scss”,
             <span className={styles.col_4}>&#93;</span>,
           </span>
+          {/*
+           * ---------------
+           *     Backend
+           * ---------------
+           */}
           <span>
             <br />
             <span className={styles.col_2}>backend && tools: </span>
             <span className={styles.col_4}>&#91;</span>
-            “NodeJS”, “GraphQL”, “Prisma”, “Sass”
+            “NodeJS”, “GraphQL”, “Prisma”, “Webpack”
             <span className={styles.col_4}>&#93;</span>,
           </span>
-          <span>
+          {/*
+           * -----------
+           *    WEB 3
+           * -----------
+           */}
+          {/* <span>
             <br />
             <span className={styles.col_2}>web3: </span>
             <span className={styles.col_4}>&#91;</span>
             “Solidity”, “Ethereum”<span className={styles.col_4}>&#93;</span>
+          </span> */}
+          {/*
+           * -----------
+           *    AWS
+           * -----------
+           */}
+          <span>
+            <br />
+            <span className={styles.col_2}>aws: </span>
+            <span className={styles.col_4}>&#91;</span>
+            “EC2”, “Lambda”, “S3”, “RDS”
+            <span className={styles.col_4}>&#93;</span>
           </span>
         </span>
       </p>
