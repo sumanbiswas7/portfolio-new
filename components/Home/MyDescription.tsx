@@ -17,7 +17,9 @@ export function MyDescription() {
         Suman <br /> Biswas.
       </h1>
       <h1 className={styles.h1_small_screen}>Suman Biswas</h1>
-      <p>student, web & app dev</p>
+      <p>
+        Student, FullStack Developer <br />
+      </p>
       <div>
         <button>
           <Link href="/contact" target="_blank">

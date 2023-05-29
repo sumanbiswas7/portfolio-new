@@ -43,7 +43,7 @@
       font-size: 0.85rem;
 
       @media only screen and (orientation: portrait) {
-        
+        padding: 0.4rem 0.75rem;
       }
       &:nth-child(1) {
         background-color: $color-dark;

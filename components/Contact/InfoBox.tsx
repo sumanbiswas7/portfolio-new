@@ -36,7 +36,7 @@ function User() {
       <img className={styles.user_img} src="./contact/user.webp" />
       <div>
         <p>Suman Biswas</p>
-        <p>FrontEnd dev</p>
+        <p>FullStack dev</p>
       </div>
     </div>
   );
