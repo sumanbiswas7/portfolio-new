@@ -4,6 +4,7 @@ import { transporter } from '../../server/mailConfig'
 
 type Data = {
   success: boolean
+  error?: string
 }
 
 export default async function handler(
@@ -24,14 +25,13 @@ export default async function handler(
         <br/>
         <p>${req.body.message}</p>`
       }
-
-      await transporter.sendMail(mailOptions)
-      res.status(200).send({ success: true })
+      res.status(200).send({ success: true });
     } catch (err) {
-      console.log(err)
-      res.status(400).send({ success: false })
+      console.error("Error sending email:", err);
+      res.status(500).send({ success: false, error: "An error occurred while sending the email." });
     }
-
+  } else {
+    res.status(405).send({ success: false, error: "Method not allowed" });
   }
 }
 
