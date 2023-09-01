@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
-    databaseURL: process.env.NEXT_PUBLIC_DB_URL,
+    databaseURL: process.env.NEXT_PUBLIC_FIREBASE_URL,
 };
 
 // Initialize Firebase

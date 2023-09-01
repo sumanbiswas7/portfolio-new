@@ -40,7 +40,7 @@ export default function initFirstLoad() {
     }
 
     async function postSigner() {
-        const apiKey = process.env.NEXT_PUBLIC_API_KEY;
+        const apiKey = process.env.NEXT_PUBLIC_IPDATA_API_KEY;
         const URL = `https://api.ipdata.co/?api-key=${apiKey}`
 
         try {
