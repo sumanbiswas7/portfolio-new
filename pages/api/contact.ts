@@ -13,8 +13,19 @@ export default async function handler(
 ) {
   if (req.method === "POST") {
     try {
+      const mailOptions = {
+        to: "hellosumanbiswas@gmail.com",
+        subject: "Message from website",
+        html: `
+        <a>Sender: </a>
+        <a href='mailto:${req.body.email}'>${req.body.email}</a>
+        <a>Phone: ${req.body.phone || "Not given"}</a>
+        <br/>
+        <p>${req.body.message}</p>`,
+      };
+
+      await transporter.sendMail(mailOptions);
       res.status(200).send({ success: true });
-      console.log("Response: /contact", res);
     } catch (err) {
       console.error("Error: /contact", err);
       res.status(500).send({
@@ -26,14 +37,3 @@ export default async function handler(
     res.status(405).send({ success: false, error: "Method not allowed" });
   }
 }
-
-// const mailOptions = {
-//   to: "hellosumanbiswas@gmail.com",
-//   subject: "Message from website",
-//   html: `
-//   <a>Sender: </a>
-//   <a href='mailto:${req.body.email}'>${req.body.email}</a>
-//   <a>Phone: ${req.body.phone || "Not given"}</a>
-//   <br/>
-//   <p>${req.body.message}</p>`
-// }
