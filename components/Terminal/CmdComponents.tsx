@@ -1,3 +1,4 @@
+import { MY_EMAIL } from "../../utils/email_options";
 import styles from "./CmdComponents.module.scss";
 
 export function SkillsCmd() {
@@ -170,7 +171,7 @@ export function ContactCmd() {
         <span className={styles.col_0}>~</span> contact info
       </p>
       <p>
-        <span className={styles.col_2}>email:</span> hellosumanbiswas@gmail.com
+        <span className={styles.col_2}>email:</span> {MY_EMAIL}
       </p>
       <p>
         <span className={styles.col_4}>instagram</span> (@sumanbiswas7) and

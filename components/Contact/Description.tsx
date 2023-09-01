@@ -6,16 +6,14 @@ import {
   SlSocialLinkedin,
   SlSocialInstagram,
 } from "react-icons/sl";
+import { MY_EMAIL } from "../../utils/email_options";
 
 export function Description() {
   return (
     <div className={styles.desc_container}>
       <h2>Quick Links</h2>
 
-      <InfoLink
-        text="hellosumanbiswas@gmail.com"
-        link="mailto:sumanbiswas842001@gmail.com"
-      >
+      <InfoLink text={MY_EMAIL} link={`mailto:${MY_EMAIL}`}>
         <FiMail className={styles.info_icon} />
       </InfoLink>
       <InfoLink text="Tehatta, West Bengal, India , 741160">

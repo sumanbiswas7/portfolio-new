@@ -39,7 +39,7 @@ export function Form() {
     setLoading(true);
     const res = await postMail(data);
 
-    if (res.status === 200) {
+    if (res.statusCode === 200) {
       setLoading(false);
       nameRef.current!.value = "";
       phoneRef.current!.value = "";

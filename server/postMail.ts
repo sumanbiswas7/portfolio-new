@@ -1,13 +1,8 @@
-interface Data {
-  name: string | undefined;
-  email: string | undefined;
-  phone: string | undefined;
-  message: string | undefined;
-}
+import { HttpRes, StatusCode } from "../utils/http_response";
 
-export async function postMail(data: Data) {
+export async function postMail(data: ContactFormData) {
   try {
-    return await fetch("/api/contact", {
+    const res = await fetch("/api/contact", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -15,8 +10,28 @@ export async function postMail(data: Data) {
         Accept: "application/json",
       },
     });
+
+    if (res.status === StatusCode.OK) {
+      return new HttpRes(StatusCode.OK, "Message has been sent successfully");
+    } else {
+      return new HttpRes(res.status, "An error occurred while sending message");
+    }
   } catch (error) {
-    console.log(error);
-    throw new Error("postMail(): Something wen't wrong");
+    return new HttpRes(
+      StatusCode.ServerError,
+      "Unable to send request to the server"
+    );
   }
+}
+
+/**
+ * ----------------
+ *      Types
+ * ----------------
+ */
+interface ContactFormData {
+  name: string | undefined;
+  email: string | undefined;
+  phone: string | undefined;
+  message: string | undefined;
 }
