@@ -32,7 +32,7 @@ export default function initFirstLoad() {
         try {
             const intCount = parseInt(<string><unknown>count)
             await set(ref(database, "/views"), { views: intCount + 1 })
-            postSigner()
+            // postSigner() 
 
         } catch (error) {
             console.log("updateViews():", error)
