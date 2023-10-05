@@ -5,6 +5,20 @@ export function Projects() {
     <>
       <Project
         id={1}
+        name="marked"
+        next="vivid"
+        imgWidth="32vmax"
+        imageUrl="./projects/img_marked.webp"
+        logoUrl="./projects/logo_marked.png"
+        link_github="https://github.com/sumanbiswas7/marked"
+        link_project="https://marked-web.vercel.app"
+        background="#6A6A6A"
+        techs={["NextJS", "NodeJS", "Turborepo", "Express"]}
+        description="Streamline Your Life with an All-in-One Solution for Link Management, Task Tracking, Note Taking and Expense Tracking - All with Handy Reminders.."
+      />
+      <Project
+        id={2}
+        project_id="project-2"
         name="vivid"
         next="poshkit"
         imageUrl="./projects/img_vivid.webp"
@@ -17,8 +31,8 @@ export function Projects() {
            images, like, comment and many more..."
       />
       <Project
-        project_id="project-2"
-        id={2}
+        project_id="project-3"
+        id={3}
         logoWidth="8rem"
         name="poshkit"
         next="lightjs"
@@ -31,8 +45,8 @@ export function Projects() {
         description="A collection of modern, fancy components with amazing hover effects for React applications. Easily add stylish and interactive UI elements to your web applications without spending hours on custom styling and animation."
       />
       <Project
-        project_id="project-3"
-        id={3}
+        project_id="project-4"
+        id={4}
         imgWidth="32vmax"
         logoWidth="7rem"
         name="lightjs"
@@ -46,8 +60,8 @@ export function Projects() {
         description="A JavaScript framework for building user interfaces. comes with a cli tool enables you to quickly start building a new Light.js application, with everything set up for you"
       />
       <Project
-        project_id="project-4"
-        id={4}
+        project_id="project-5"
+        id={5}
         imgWidth="32vmax"
         logoWidth="8rem"
         name="cinematic"
@@ -61,8 +75,8 @@ export function Projects() {
         description="A platform that provides movie lovers with an immersive experience to discover, share, and indulge in their favorite movies"
       />
       <Project
-        id={5}
-        project_id="project-5"
+        id={6}
+        project_id="project-6"
         imgWidth="35vmax"
         name="nutshell"
         // next="NFT"

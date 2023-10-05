@@ -26,6 +26,9 @@ export function UsedTechnologies(technologies: Props) {
     rollup: "https://rollupjs.org/",
     webpack: "https://webpack.js.org/",
     typescript: "https://www.typescriptlang.org/",
+    turborepo: "https://turbo.build",
+    express: "https://expressjs.com",
+    nodejs: "https://nodejs.org",
   };
 
   return (
