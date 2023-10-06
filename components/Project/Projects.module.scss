@@ -1,0 +1,19 @@
+@import "../../styles/constants.scss";
+@import "../../styles/helpers.scss";
+
+.page_container {
+  @include new-page;
+  background-color: #373737;
+}
+
+.scroll_container {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.grid_container {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
