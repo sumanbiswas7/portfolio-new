@@ -15,5 +15,10 @@
   padding: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
+
   gap: 1rem;
+
+  @media only screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
 }

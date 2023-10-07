@@ -1,8 +1,7 @@
 @import "../../styles/helpers.scss";
 
 .container {
-  $size: 45vw;
-  height: $size * 0.8;
+  min-height: 30vmax;
   width: 100%;
 
   padding: 1.25em;
@@ -16,10 +15,12 @@
   position: relative;
   overflow: hidden;
   background: linear-gradient(180deg, #404040 0%, #404040 100%);
-  //   background: linear-gradient(180deg, #6d3d3d 0%, #404040 100%);
+  transition: all 1s;
+
   .top_cont_margin {
     margin-bottom: 1rem;
   }
+
   .top_row {
     @include flex-center;
     justify-content: space-between;
@@ -38,12 +39,20 @@
 
   p {
     color: #b0b0b0;
+    font-size: 0.85rem;
   }
 }
 
 .cover_img {
   width: 100%;
   box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0.85;
+  // @media only screen and (min-width: $breakpoint-mid) {
+  //   border-radius: 0.25rem;
+  //   height: 22rem;
+  //   object-fit: cover;
+  //   object-position: bottom;
+  // }
 }
 
 .bottom_blur {
@@ -56,4 +65,19 @@
     rgba(72, 72, 72, 0) 0%,
     rgba(32, 32, 32, 0.85) 100%
   );
+}
+
+// TAGS
+.tags_cont {
+  @include flex-center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  flex-wrap: wrap;
+
+  & > .tag {
+    background-color: #fff;
+    color: #1d1d1d;
+    padding: 0.1rem 0.5rem;
+    border-radius: 1rem;
+  }
 }

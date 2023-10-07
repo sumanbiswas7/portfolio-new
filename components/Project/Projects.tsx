@@ -13,7 +13,8 @@ export function Projects() {
             <ProjectCard
               description={p.description}
               img={p.img}
-              title={p.img}
+              title={p.title}
+              color={p.accent}
             />
           ))}
         </div>
