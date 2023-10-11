@@ -15,6 +15,13 @@
   position: relative;
   overflow: hidden;
   background: linear-gradient(180deg, #404040 0%, #404040 100%);
+
+  background: linear-gradient(
+    180deg,
+    rgba(67, 67, 67, 0.62) 0%,
+    rgba(64, 64, 64, 0.6) 100%
+  );
+
   transition: all 1s;
 
   .top_cont_margin {
@@ -47,12 +54,6 @@
   width: 100%;
   box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
   opacity: 0.85;
-  // @media only screen and (min-width: $breakpoint-mid) {
-  //   border-radius: 0.25rem;
-  //   height: 22rem;
-  //   object-fit: cover;
-  //   object-position: bottom;
-  // }
 }
 
 .bottom_blur {

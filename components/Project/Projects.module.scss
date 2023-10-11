@@ -4,11 +4,39 @@
 .page_container {
   @include new-page;
   background-color: #373737;
+  background-image: url("../../public/project/world.png");  
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: spin 1s infinite;
+
+  @keyframes spin {
+    0% {
+      // transform: rotate(0);
+    }
+    100% {
+      // transform: rotate3d(360);
+      // transform: rotate3d(0, 1, 0.5, 3.142rad);
+    }
+  }
 }
 
 .scroll_container {
   height: 100%;
   overflow-y: scroll;
+
+  & > h1 {
+    margin: 1rem 1rem 0 1rem;
+    color: #fff;
+    font-weight: 300;
+  }
+
+  & > p {
+    margin-inline: 1rem;
+    margin-bottom: 1rem;
+    color: #bbbbbb;
+    font-weight: 200;
+  }
 }
 
 .grid_container {
