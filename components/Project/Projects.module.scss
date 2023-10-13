@@ -3,11 +3,6 @@
 
 .page_container {
   @include new-page;
-  background-color: #373737;
-  background-image: url("../../public/project/world.png");  
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
   animation: spin 1s infinite;
 
   @keyframes spin {
@@ -19,6 +14,10 @@
       // transform: rotate3d(0, 1, 0.5, 3.142rad);
     }
   }
+
+  background-color: #373737;
+  background: linear-gradient(180deg, #373737 0%, #1d1d1d 50%, #373737 100%);
+  // background-image: url("/project/grid 1.svg");
 }
 
 .scroll_container {
@@ -40,13 +39,52 @@
 }
 
 .grid_container {
-  padding: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  gap: 1rem;
+  padding: 2rem;
+  gap: 2rem;
 
   @media only screen and (max-width: 800px) {
     grid-template-columns: 1fr;
+  }
+}
+
+// Projects animation
+.my_projects {
+  position: absolute;
+  background-color: $color-dark;
+  color: #fff;
+
+  padding: 1rem 2rem;
+  border-radius: 0.3rem;
+  font-size: 3rem;
+
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#animate {
+  animation-name: name-in;
+  animation-duration: 2s;
+  opacity: 0;
+}
+
+@keyframes name-in {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
