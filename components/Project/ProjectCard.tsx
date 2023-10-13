@@ -3,7 +3,7 @@ import styles from "./ProjectCard.module.scss";
 import { BsArrowRight } from "react-icons/bs";
 import { useEffect, useState } from "react";
 
-export function ProjectCard({ description, img, title, color }: Props) {
+export function ProjectCard({ description, img, title, color, id }: Props) {
   const [hover, setHover] = useState(false);
 
   // let isMobile = /iPhone|iPad|iPod|Android/i.test(window?.navigator?.userAgent);
@@ -19,7 +19,7 @@ export function ProjectCard({ description, img, title, color }: Props) {
   };
 
   return (
-    <Link href={"/"}>
+    <Link href={`/projects/${id}`}>
       <div
         className={styles.container}
         style={isMobile ? mobStyles : normalStyles}
@@ -59,4 +59,5 @@ interface Props {
   description: string;
   img: string;
   color: string;
+  id: number;
 }

@@ -30,6 +30,7 @@ export function Projects() {
         <div className={styles.grid_container}>
           {projects.map((p) => (
             <ProjectCard
+              id={p.id}
               description={p.description}
               img={p.img}
               title={p.title}
