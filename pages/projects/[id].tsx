@@ -7,6 +7,8 @@ import { RiGithubLine, RiLink, RiHomeSmileLine } from "react-icons/ri";
 import { Project } from "../../types/project";
 import Link from "next/link";
 import { tagLinks } from "../../data/tag-links";
+import { LoadingScreen } from "../../components/States/LoadingScreen";
+import { ErrorScreen } from "../../components/States/ErrorScreen";
 
 export default function ProjectsByIdPage() {
   const [data, setData] = useState<DataState>({
@@ -21,8 +23,8 @@ export default function ProjectsByIdPage() {
     initLoadProject(id);
   }, [id]);
 
-  if (data.load) return <h1>Loading...</h1>;
-  if (data.err) return <h1>{data.err}</h1>;
+  if (data.load) return <LoadingScreen />;
+  if (data.err) return <ErrorScreen msg={data.err} />;
 
   return (
     <div className={styles.main_container}>
