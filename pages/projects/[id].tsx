@@ -6,6 +6,7 @@ import { BiArrowBack } from "react-icons/bi";
 import { RiGithubLine, RiLink, RiHomeSmileLine } from "react-icons/ri";
 import { Project } from "../../types/project";
 import Link from "next/link";
+import { tagLinks } from "../../data/tag-links";
 
 export default function ProjectsByIdPage() {
   const [data, setData] = useState<DataState>({
@@ -96,7 +97,11 @@ export default function ProjectsByIdPage() {
 }
 
 function Tag({ title }: { title: string }) {
-  const href = "";
+  let href = "";
+  const strippedTitle = title
+    .toLowerCase()
+    .replaceAll(" ", "") as keyof typeof tagLinks;
+  if (strippedTitle in tagLinks) href = tagLinks[strippedTitle];
 
   return (
     <a href={href} target="_blank" className={styles.tag}>

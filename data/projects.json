@@ -5,7 +5,7 @@
     "description": "A versatile solution for link management, task tracking, note-taking, and expense management with convenient reminders.",
     "img": "/project/cover-marked.png",
     "accent": "#2d2d2d",
-    "tags": ["NextJS", "NodeJs", "Truborepo", "Express"],
+    "tags": ["NextJS", "NodeJs", "Turborepo", "Express"],
     "github": "https://github.com/sumanbiswas7/marked",
     "live": "https://marked-web.vercel.app/"
   },
