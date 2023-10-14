@@ -80,7 +80,7 @@
       color: rgba(#fff, 0.8);
     }
     & > p {
-      font-size: 1rem;
+      font-size: 1.15rem;
       color: rgba(#fff, 0.5);
       margin-bottom: 1rem;
     }
@@ -98,13 +98,14 @@
 // tag
 .tag {
   text-decoration: none;
-  padding: 0.25rem 1rem;
-  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
   background-color: #585858;
   color: rgba(#fff, 0.7);
   border: none;
   font-family: inherit;
   font-size: inherit;
+  font-size: 0.85rem;
   @include flex-center;
   gap: 0.25rem;
 }
