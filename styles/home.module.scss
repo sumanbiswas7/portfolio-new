@@ -1,0 +1,15 @@
+@import "./constants.scss";
+
+.main {
+   position: relative;
+   scroll-behavior: smooth;
+}
+
+// fixed background gradient for all sections
+.bg_gradient {
+   z-index: 1;
+   width: 100vw;
+   height: 100vh;
+   position: fixed;
+   background: $bg-gradient;
+}

@@ -7,6 +7,10 @@
    font-family: "Fredoka", sans-serif;
 }
 
+body {
+   scroll-behavior: smooth;
+}
+
 // scrollbar css
 ::-webkit-scrollbar {
    width: 5px;

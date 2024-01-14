@@ -1,0 +1,6 @@
+@import "../../styles/helpers.scss";
+
+.container {
+   @include section;
+   top: 100dvh;
+}

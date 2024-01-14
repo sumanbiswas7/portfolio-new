@@ -1,0 +1,7 @@
+@import "../../styles/helpers.scss";
+
+.container {
+   @include section;
+   top: 0;
+   background-image: url("../../public/home/doodle-texture.svg");
+}
