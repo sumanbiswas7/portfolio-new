@@ -3,6 +3,7 @@ import classes from "./home.module.scss";
 import { Hamburger } from "../ui/hamburger";
 import { Button } from "../ui/button";
 import { IconCertificate, IconMessageShare } from "@tabler/icons-react";
+import { StickyBar } from "../sticky-bar/sticky-bar";
 
 export function HomeSection() {
    return (
@@ -36,6 +37,8 @@ export function HomeSection() {
                </div>
             </div>
          </div>
+
+         <StickyBar />
       </div>
    );
 }
