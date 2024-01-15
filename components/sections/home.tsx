@@ -24,6 +24,7 @@ export function HomeSection() {
                   SUMAN <br />
                   BISWAS.
                </h1>
+               <h1 className={classes.sm_head}>SUMAN BISWAS</h1>
                <p>FullStack Developer</p>
                <p>@Web-Wizards, @PlausibilitySolutions</p>
 

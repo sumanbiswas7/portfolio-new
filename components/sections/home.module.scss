@@ -1,4 +1,5 @@
 @import "../../styles/helpers.scss";
+@import "../../styles/constants.scss";
 
 .container {
    @include section;
@@ -7,12 +8,23 @@
    background-image: url("../../public/home/doodle-texture.svg");
    padding: 1rem;
 
+   @media only screen and (max-width: $bp-sm) {
+      flex-direction: column;
+   }
+
    .left_box {
       @include flex-center;
       padding-left: 15%;
       width: 50%;
       height: 100%;
-      // background-color: green;
+
+      @media only screen and (max-width: $bp-mid) {
+         padding-left: 0;
+      }
+      @media only screen and (max-width: $bp-sm) {
+         width: 100%;
+         height: max-content;
+      }
 
       .img_circle {
          width: 20vw;
@@ -29,6 +41,17 @@
             position: absolute;
             bottom: 0;
          }
+
+         @media only screen and (max-width: $bp-mid) {
+            width: 30vw;
+            height: 30vw;
+         }
+         @media only screen and (max-width: $bp-sm) {
+            width: 12rem;
+            height: 12rem;
+            margin-top: 4rem;
+            margin-bottom: 0;
+         }
       }
    }
    .right_box {
@@ -37,28 +60,64 @@
       height: 100%;
       // background-color: blue;
       padding-right: 15%;
+      @media only screen and (max-width: $bp-mid) {
+         padding-right: 0;
+      }
+      @media only screen and (max-width: $bp-sm) {
+         width: 100%;
+         height: max-content;
+      }
 
       .right_center_cont {
          $fsize: 6.5vw;
+         @media only screen and (max-width: $bp-sm) {
+            margin-top: 1rem;
+         }
+
+         .sm_head {
+            display: none;
+
+            @media only screen and (max-width: $bp-sm) {
+               margin-top: 1rem;
+               display: inline;
+               color: #f4f4f4;
+               text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+               font-weight: 600;
+            }
+         }
 
          & > h1 {
             font-size: 4rem;
             font-size: $fsize;
-
             color: #f4f4f4;
             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             font-weight: 600;
+
+            @media only screen and (max-width: $bp-mid) {
+               font-size: 4rem;
+            }
+            @media only screen and (max-width: $bp-sm) {
+               font-size: 2.5rem;
+               display: none;
+            }
          }
 
-         & > p:nth-child(2) {
+         & > p:nth-child(3) {
             color: #e7e7e7;
             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             font-size: 1.2rem;
             font-size: $fsize * 0.3;
             font-weight: 400;
+
+            @media only screen and (max-width: $bp-mid) {
+               font-size: 1rem;
+            }
+            @media only screen and (max-width: $bp-sm) {
+               font-size: 1.2rem;
+            }
          }
 
-         & > p:nth-child(3) {
+         & > p:nth-child(4) {
             margin-top: 0.25rem;
             color: #b0b0b0;
             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -66,6 +125,12 @@
             font-size: $fsize * 0.2;
             font-weight: 400;
             margin-bottom: 0.75rem;
+
+            @media only screen and (max-width: $bp-mid) {
+               font-size: 0.85rem;
+            }
+            @media only screen and (max-width: $bp-sm) {
+            }
          }
 
          .btn_cont {
