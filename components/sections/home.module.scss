@@ -4,4 +4,12 @@
    @include section;
    top: 0;
    background-image: url("../../public/home/doodle-texture.svg");
+   padding: 1rem;
+}
+
+.logo {
+   position: absolute;
+   top: 1rem;
+   left: 1rem;
+   width: 3rem;
 }

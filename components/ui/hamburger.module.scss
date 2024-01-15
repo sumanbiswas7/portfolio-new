@@ -1,0 +1,12 @@
+@import "../../styles/helpers.scss";
+
+.container {
+   width: 2.75rem;
+   height: 2.75rem;
+   border-radius: 50%;
+   @include flex-center;
+   background-color: #4d4d4d;
+   position: fixed;
+   top: 1rem;
+   right: 1rem;
+}
