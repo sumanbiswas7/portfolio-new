@@ -8,15 +8,35 @@
    padding: 1rem;
 
    .left_box {
+      @include flex-center;
+      padding-left: 15%;
       width: 50%;
       height: 100%;
       // background-color: green;
+
+      .img_circle {
+         width: 20vw;
+         height: 20vw;
+         border-radius: 50%;
+         border: 1px solid #4b4b4b;
+         background: rgba(106, 106, 106, 0.2);
+         backdrop-filter: blur(2px);
+         position: relative;
+         margin-bottom: -15vh;
+
+         .suman_img {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+         }
+      }
    }
    .right_box {
       @include flex-center;
       width: 50%;
       height: 100%;
       // background-color: blue;
+      padding-right: 15%;
 
       .right_center_cont {
          $fsize: 6.5vw;

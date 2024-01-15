@@ -12,7 +12,11 @@ export function HomeSection() {
          </Link>
          <Hamburger />
 
-         <div className={classes.left_box}></div>
+         <div className={classes.left_box}>
+            <div className={classes.img_circle}>
+               <img src="/home/suman.webp" className={classes.suman_img} />
+            </div>
+         </div>
          <div className={classes.right_box}>
             <div className={classes.right_center_cont}>
                <h1>
