@@ -35,11 +35,30 @@
          backdrop-filter: blur(2px);
          position: relative;
          margin-bottom: -15vh;
+         animation: circle-load 2s;
 
          .suman_img {
             width: 100%;
             position: absolute;
             bottom: 0;
+            animation: load-img 1s;
+         }
+
+         @keyframes circle-load {
+            0% {
+               transform: translateY(1rem);
+            }
+         }
+         @keyframes load-img {
+            0% {
+               width: 80%;
+            }
+            50% {
+               width: 110%;
+            }
+            100% {
+               width: 100%;
+            }
          }
 
          @media only screen and (max-width: $bp-mid) {
@@ -47,8 +66,8 @@
             height: 30vw;
          }
          @media only screen and (max-width: $bp-sm) {
-            width: 12rem;
-            height: 12rem;
+            width: 14rem;
+            height: 14rem;
             margin-top: 4rem;
             margin-bottom: 0;
          }
@@ -113,7 +132,7 @@
                font-size: 1rem;
             }
             @media only screen and (max-width: $bp-sm) {
-               font-size: 1.2rem;
+               font-size: 1.25rem;
             }
          }
 
@@ -130,6 +149,7 @@
                font-size: 0.85rem;
             }
             @media only screen and (max-width: $bp-sm) {
+               font-size: 0.95rem;
             }
          }
 
