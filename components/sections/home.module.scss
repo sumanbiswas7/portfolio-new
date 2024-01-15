@@ -2,9 +2,59 @@
 
 .container {
    @include section;
+   @include flex-center;
    top: 0;
    background-image: url("../../public/home/doodle-texture.svg");
    padding: 1rem;
+
+   .left_box {
+      width: 50%;
+      height: 100%;
+      // background-color: green;
+   }
+   .right_box {
+      @include flex-center;
+      width: 50%;
+      height: 100%;
+      // background-color: blue;
+
+      .right_center_cont {
+         $fsize: 6.5vw;
+
+         & > h1 {
+            font-size: 4rem;
+            font-size: $fsize;
+
+            color: #f4f4f4;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            font-weight: 600;
+         }
+
+         & > p:nth-child(2) {
+            color: #e7e7e7;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            font-size: 1.2rem;
+            font-size: $fsize * 0.3;
+            font-weight: 400;
+         }
+
+         & > p:nth-child(3) {
+            margin-top: 0.25rem;
+            color: #b0b0b0;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            font-size: 1rem;
+            font-size: $fsize * 0.2;
+            font-weight: 400;
+            margin-bottom: 0.75rem;
+         }
+
+         .btn_cont {
+            @include flex-center;
+            justify-content: flex-start;
+            gap: 1rem;
+         }
+      }
+   }
 }
 
 .logo {
