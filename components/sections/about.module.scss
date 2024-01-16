@@ -1,6 +1,15 @@
 @import "../../styles/helpers.scss";
+@import "../../styles/constants.scss";
 
 .container {
    @include section;
-   top: 100dvh;
+   @include flex-center;
+   top: 100vh;
+}
+
+.texture {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 50vw;
 }

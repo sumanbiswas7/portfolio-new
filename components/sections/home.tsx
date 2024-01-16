@@ -11,7 +11,6 @@ export function HomeSection() {
          <Link href={"/"}>
             <img src="/home/logo.svg" className={classes.logo} />
          </Link>
-         <Hamburger />
 
          <div className={classes.left_box}>
             <div className={classes.img_circle}>
@@ -38,8 +37,6 @@ export function HomeSection() {
                </div>
             </div>
          </div>
-
-         <StickyBar />
       </div>
    );
 }
