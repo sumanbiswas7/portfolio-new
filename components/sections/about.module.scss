@@ -7,9 +7,67 @@
    top: 100vh;
 }
 
+.centered_div {
+   @include flex-center;
+   z-index: 2;
+   color: #fff;
+   gap: 2rem;
+
+   @media only screen and (max-width: $bp-sm) {
+      flex-direction: column;
+   }
+
+   & > img {
+      width: 20rem;
+
+      @media only screen and (max-width: $bp-mid) {
+         width: 30%;
+      }
+      @media only screen and (max-width: $bp-sm) {
+         width: 50%;
+      }
+   }
+
+   .txt_box {
+      @media only screen and (max-width: $bp-sm) {
+         @include flex-center;
+         flex-direction: column;
+      }
+
+      & > h3 {
+         font-weight: 400;
+         font-size: 2.5rem;
+         text-transform: uppercase;
+
+         @media only screen and (max-width: $bp-sm) {
+            font-size: 1.5rem;
+            width: 90%;
+         }
+      }
+
+      & > p {
+         width: 47ch;
+
+         @media only screen and (max-width: $bp-mid) {
+            width: 45vw;
+         }
+
+         @media only screen and (max-width: $bp-sm) {
+            width: 90%;
+            font-size: 0.85rem;
+         }
+      }
+   }
+}
+
 .texture {
    position: absolute;
+   z-index: 1;
    bottom: 0;
    left: 0;
-   width: 50vw;
+   width: 40vw;
+
+   @media only screen and (max-width: $bp-sm) {
+      width: 50%;
+   }
 }
