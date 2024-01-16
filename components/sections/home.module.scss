@@ -6,6 +6,9 @@
    @include flex-center;
    top: 0;
    background-image: url("../../public/home/doodle-texture.svg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
    padding: 1rem;
 
    @media only screen and (max-width: $bp-sm) {
