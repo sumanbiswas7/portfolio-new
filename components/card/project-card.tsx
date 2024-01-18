@@ -23,7 +23,9 @@ export function ProjectCard({ project }: { project: Project }) {
                </div>
                <p className={classes.desc}>{project.description}</p>
                <img src={project.img} className={classes.cover_img} id="coverimg" />
-               <div className={classes.gradient_overlay} />
+               <div className={classes.gradient_overlay} >
+                  
+               </div>
             </div>
          </div>
       </Link>
