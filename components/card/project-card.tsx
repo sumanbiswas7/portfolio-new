@@ -17,10 +17,12 @@ export function ProjectCard({ project }: { project: Project }) {
             <div className={classes.container} style={gradient}>
                <div className={classes.flex_row}>
                   <h4>{project.title}</h4>
-                  <IconArrowNarrowRight color="#fff" />
+                  <span id={classes.right_arrow}>
+                     <IconArrowNarrowRight color="#fff" />
+                  </span>
                </div>
                <p className={classes.desc}>{project.description}</p>
-               <img src={project.img} className={classes.cover_img} />
+               <img src={project.img} className={classes.cover_img} id="coverimg" />
                <div className={classes.gradient_overlay} />
             </div>
          </div>

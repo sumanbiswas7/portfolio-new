@@ -4,7 +4,7 @@
       "title": "Marked",
       "description": "A versatile solution for link management, task tracking, note-taking, and expense management with convenient reminders.",
       "img": "/work/cover-marked.png",
-      "accent": "#2d2d2d",
+      "accent": "#454545",
       "tags": ["NextJS", "NodeJs", "Turborepo", "Express"],
       "github": "https://github.com/sumanbiswas7/marked",
       "live": "https://marked-web.vercel.app/"
@@ -14,7 +14,7 @@
       "title": "Vivid",
       "description": "a social media app for mobile where people can share images, like, comment and many more...",
       "img": "/work/cover-vivid.png",
-      "accent": "#C25734",
+      "accent": "#482F1D",
       "tags": ["React Native", "Redux", "Cloudinary", "Firebase"],
       "github": "https://github.com/sumanbiswas7/vivid",
       "live": "https://play.google.com/store/apps/details?id=com.suman_biswas.vivid&pli=1"
@@ -24,7 +24,7 @@
       "title": "Poshkit",
       "description": "A collection of modern, fancy components with amazing hover effects for React applications. Easily add stylish and interactive UI elements to your webapps",
       "img": "/work/cover-poshkit.png",
-      "accent": "#2B805C",
+      "accent": "#173728",
       "tags": ["Rollup", "Storybook", "NPM", "React"],
       "github": "https://github.com/sumanbiswas7/poshkit",
       "live": "https://www.npmjs.com/package/poshkit"
@@ -34,7 +34,7 @@
       "title": "Cinematic",
       "description": "A platform that provides movie lovers with an immersive experience to discover, share, and indulge in their favorite movies",
       "img": "/work/cover-cinematic.png",
-      "accent": "#6d3d3d",
+      "accent": "#371917",
       "tags": ["NextJS", "Postgres", "AWS", "Sass", "GraphQL"],
       "github": "https://github.com/sumanbiswas7/cinematic",
       "live": "https://cinematic-web.vercel.app"
