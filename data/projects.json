@@ -7,7 +7,8 @@
       "accent": "#454545",
       "tags": ["NextJS", "NodeJs", "Turborepo", "Express"],
       "github": "https://github.com/sumanbiswas7/marked",
-      "live": "https://marked-web.vercel.app/"
+      "live": "https://marked-web.vercel.app/",
+      "org": "Personal"
    },
    {
       "id": 2,
@@ -17,7 +18,8 @@
       "accent": "#482F1D",
       "tags": ["React Native", "Redux", "Cloudinary", "Firebase"],
       "github": "https://github.com/sumanbiswas7/vivid",
-      "live": "https://play.google.com/store/apps/details?id=com.suman_biswas.vivid&pli=1"
+      "live": "https://play.google.com/store/apps/details?id=com.suman_biswas.vivid&pli=1",
+      "org": "Personal"
    },
    {
       "id": 3,
@@ -27,7 +29,8 @@
       "accent": "#173728",
       "tags": ["Rollup", "Storybook", "NPM", "React"],
       "github": "https://github.com/sumanbiswas7/poshkit",
-      "live": "https://www.npmjs.com/package/poshkit"
+      "live": "https://www.npmjs.com/package/poshkit",
+      "org": "Personal"
    },
    {
       "id": 4,
@@ -37,6 +40,7 @@
       "accent": "#371917",
       "tags": ["NextJS", "Postgres", "AWS", "Sass", "GraphQL"],
       "github": "https://github.com/sumanbiswas7/cinematic",
-      "live": "https://cinematic-web.vercel.app"
+      "live": "https://cinematic-web.vercel.app",
+      "org": "Personal"
    }
 ]
