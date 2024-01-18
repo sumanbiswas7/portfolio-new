@@ -1,6 +1,7 @@
 import { ProjectCard } from "../card/project-card";
 import { SectionTitle } from "../ui/section-title";
 import classes from "./work.module.scss";
+import PROJECTS from "../../data/projects.json";
 
 export function WorkSection() {
    return (
@@ -8,12 +9,9 @@ export function WorkSection() {
          <SectionTitle title="My Work" />
 
          <div className={classes.grid_container}>
-            <ProjectCard />
-            <ProjectCard />
-
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
+            {PROJECTS.map((p) => (
+               <ProjectCard project={p} />
+            ))}
          </div>
       </div>
    );
