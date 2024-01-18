@@ -1,7 +1,6 @@
 import Link from "next/link";
 import classes from "./project-card.module.scss";
 import { IconArrowNarrowRight } from "@tabler/icons-react";
-import PROJECTS from "../../data/projects.json";
 
 export function ProjectCard() {
    return (
@@ -19,7 +18,6 @@ export function ProjectCard() {
                   A collection of modern, fancy components with amazing hover effects for React applications.
                </p>
                <img src={"/work/cover-poshkit.png"} className={classes.cover_img} />
-
                <div className={classes.gradient_overlay} />
             </div>
          </div>
