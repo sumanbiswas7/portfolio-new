@@ -7,5 +7,7 @@ export interface Project {
    tags: string[];
    github: string;
    live: string;
-   org: "Personal" | "Web-wizs" | "P.Sols";
+   org: string;
 }
+
+// org: "Personal" | "Web-wizs" | "P.Sols";
