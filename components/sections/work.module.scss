@@ -1,0 +1,22 @@
+@import "../../styles/helpers.scss";
+@import "../../styles/constants.scss";
+
+.container {
+   @include section;
+   @include flex-center;
+   top: 200vh;
+   height: max-content;
+}
+
+.grid_container {
+   margin-top: 2rem;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+
+   padding: 2rem;
+   gap: 2rem;
+
+   @media only screen and (max-width: 800px) {
+      grid-template-columns: 1fr;
+   }
+}
