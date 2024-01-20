@@ -29,11 +29,19 @@ $size: 25vw;
    background-position: center;
    background-size: cover;
    background-image: url("../../public/contact/bg.webp");
+
+   @media only screen and (max-width: $bp-lg) {
+      height: 22rem;
+   }
 }
 
 .form {
    padding: 1rem;
    min-width: $size * 1.5;
+
+   @media only screen and (max-width: $bp-lg) {
+      min-width: $size * 2;
+   }
 }
 
 .flex_end {
