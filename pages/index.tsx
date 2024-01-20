@@ -1,5 +1,6 @@
 import { MetaHead } from "../components/meta-head";
 import { AboutSection } from "../components/sections/about";
+import { ContactSection } from "../components/sections/contact";
 import { HomeSection } from "../components/sections/home";
 import { WorkSection } from "../components/sections/work";
 import { StickyBar } from "../components/sticky-bar/sticky-bar";
@@ -19,7 +20,7 @@ export default function Home() {
             <HomeSection />
             <AboutSection />
             <WorkSection />
-            <AboutSection />
+            <ContactSection />
          </div>
       </main>
    );

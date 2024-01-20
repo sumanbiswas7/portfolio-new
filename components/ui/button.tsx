@@ -18,4 +18,5 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
    icon?: React.ReactNode;
    children?: React.ReactNode;
    vw?: boolean;
+   fw?: boolean;
 }

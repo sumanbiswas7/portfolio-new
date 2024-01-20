@@ -1,0 +1,42 @@
+@import "../../styles/helpers.scss";
+@import "../../styles/constants.scss";
+
+.container {
+   @include section;
+   @include flex-center;
+}
+
+.centered_div {
+   @include flex-center;
+   border-radius: 1rem;
+   border: 1px solid #6f6f6f;
+   background: rgba(47, 47, 47, 0.5);
+   backdrop-filter: blur(2px);
+   overflow: hidden;
+   box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.05);
+}
+
+.flex_row {
+   display: flex;
+   gap: 0.5rem;
+}
+
+$size: 25vw;
+.img_div {
+   width: $size;
+   min-height: $size * 1.45;
+
+   background-position: center;
+   background-size: cover;
+   background-image: url("../../public/contact/bg.webp");
+}
+
+.form {
+   padding: 1rem;
+   min-width: $size * 1.5;
+}
+
+.flex_end {
+   display: flex;
+   justify-content: flex-end;
+}
