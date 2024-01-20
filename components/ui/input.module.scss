@@ -1,3 +1,5 @@
+@import "../../styles/constants.scss";
+
 .lottie {
    width: 1.25rem;
    fill: #fff;
@@ -39,5 +41,9 @@
    textarea {
       max-height: 7rem;
       min-height: 5rem;
+
+      @media only screen and (max-width: $bp-sm-2) {
+         min-height: 15vh;
+      }
    }
 }

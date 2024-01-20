@@ -4,6 +4,10 @@
 .container {
    @include section;
    @include flex-center;
+
+   @media only screen and (max-width: $bp-sm-2) {
+      display: block;
+   }
 }
 
 .centered_div {
@@ -14,6 +18,13 @@
    backdrop-filter: blur(2px);
    overflow: hidden;
    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.05);
+
+   @media only screen and (max-width: $bp-sm-2) {
+      flex-direction: column;
+      border-radius: 0;
+      border: none;
+      box-shadow: none;
+   }
 }
 
 .flex_row {
@@ -33,6 +44,11 @@ $size: 25vw;
    @media only screen and (max-width: $bp-lg) {
       height: 22rem;
    }
+
+   @media only screen and (max-width: $bp-sm-2) {
+      height: 40vh;
+      width: 100%;
+   }
 }
 
 .form {
@@ -41,6 +57,11 @@ $size: 25vw;
 
    @media only screen and (max-width: $bp-lg) {
       min-width: $size * 2;
+   }
+
+   @media only screen and (max-width: $bp-sm-2) {
+      width: 100%;
+      height: 60vh;
    }
 }
 
