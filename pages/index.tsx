@@ -15,9 +15,12 @@ export default function Home() {
          <Hamburger />
          <StickyBar />
 
-         <HomeSection />
-         <AboutSection />
-         <WorkSection />
+         <div className={classes.content}>
+            <HomeSection />
+            <AboutSection />
+            <WorkSection />
+            <AboutSection />
+         </div>
       </main>
    );
 }

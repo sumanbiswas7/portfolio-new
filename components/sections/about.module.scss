@@ -4,7 +4,6 @@
 .container {
    @include section;
    @include flex-center;
-   top: 100vh;
 }
 
 .centered_div {
