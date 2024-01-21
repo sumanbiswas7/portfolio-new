@@ -1,0 +1,27 @@
+@import "../../styles/constants.scss";
+@import "../../styles/helpers.scss";
+
+.container {
+   @include flex-center;
+   justify-content: space-between;
+   margin-top: 2rem;
+}
+
+.copyright_text {
+   width: fit-content;
+   font-size: 0.75rem;
+   color: rgba($color: #fff, $alpha: 0.6);
+}
+
+.views_box {
+   border: 1px solid #fff;
+   padding: 0.2rem;
+   width: fit-content;
+   @include flex-center;
+   color: #fff;
+   border-radius: 0.3rem;
+   & > span {
+      font-size: 0.7rem;
+      margin-left: 0.2rem;
+   }
+}

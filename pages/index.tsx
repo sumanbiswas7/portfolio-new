@@ -4,8 +4,8 @@ import { AboutSection } from "../components/sections/about";
 import { HomeSection } from "../components/sections/home";
 import { WorkSection } from "../components/sections/work";
 import { StickyBar } from "../components/sticky-bar/sticky-bar";
-import { Hamburger } from "../components/ui/hamburger";
 import classes from "../styles/home.module.scss";
+import Navbar from "../components/navbar/navbar";
 
 const ContactNoSSR = dynamic(() => import("../components/sections/contact"), {
    ssr: false,
@@ -16,7 +16,7 @@ export default function Home() {
       <main className={classes.main}>
          <MetaHead />
          <div className={classes.bg_gradient} />
-         <Hamburger />
+         <Navbar />
          <StickyBar />
 
          <div className={classes.content}>

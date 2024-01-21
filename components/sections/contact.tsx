@@ -64,7 +64,7 @@ export default function ContactSection() {
    }
 
    return (
-      <div className={classes.container} id="about">
+      <div className={classes.container} id="contact">
          <SectionTitle title="Contact Me" />
 
          <div className={classes.centered_div}>
