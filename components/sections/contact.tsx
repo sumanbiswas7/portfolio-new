@@ -11,6 +11,8 @@ import React, { useRef, useState } from "react";
 import { Toaster, toast } from "sonner";
 import { validMessage } from "../../utils/validate-message";
 import { SuccessPopup } from "../popup/success-popup";
+import { sendEmail } from "../../server/send-email";
+import { StatusCode } from "../../utils/http_response";
 
 export function ContactSection() {
    const [loading, setLoading] = useState(false);
@@ -28,23 +30,32 @@ export function ContactSection() {
             name: nameRef.current?.value,
             phone: phoneRef.current?.value,
             email: emailRef.current?.value,
-            msg: msgRef.current?.value,
+            message: msgRef.current?.value,
          };
 
          const valid = validMessage(form);
          if (valid.valid === false) return toast.error(valid.msg);
          setLoading(true);
-         setTimeout(() => {
-            setLoading(false);
-            (nameRef.current as any).value = "";
-            (phoneRef.current as any).value = "";
-            (emailRef.current as any).value = "";
-            (msgRef.current as any).value = "";
-            setSuccess(true);
-         }, 1000);
+
+         const res = await sendEmail(form);
+         setLoading(false);
+
+         if (res.statusCode !== StatusCode.OK) return toast.error(`Email not sent`);
+
+         // reset the states after success
+         resetInputs();
+         setSuccess(true);
       } catch (error) {
+         console.log(error);
          setLoading(false);
       }
+   }
+
+   function resetInputs() {
+      (nameRef.current as any).value = "";
+      (phoneRef.current as any).value = "";
+      (emailRef.current as any).value = "";
+      (msgRef.current as any).value = "";
    }
 
    return (
