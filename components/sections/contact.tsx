@@ -13,6 +13,10 @@ import { validMessage } from "../../utils/validate-message";
 import { SuccessPopup } from "../popup/success-popup";
 import { sendEmail } from "../../server/send-email";
 import { StatusCode } from "../../utils/http_response";
+import { FollowMe } from "../card/follow-me";
+import { IconAt } from "@tabler/icons-react";
+import { IconBrandInstagram } from "@tabler/icons-react";
+import { IconBrandLinkedin } from "@tabler/icons-react";
 
 export default function ContactSection() {
    const [loading, setLoading] = useState(false);
@@ -63,7 +67,12 @@ export default function ContactSection() {
          <SectionTitle title="Contact Me" />
 
          <div className={classes.centered_div}>
-            <div className={classes.img_div}></div>
+            <div className={classes.img_div}>
+               <div className={classes.overlay_img}>
+                  <FollowMe />
+                  <SocialLinks />
+               </div>
+            </div>
             <form className={classes.form}>
                <div className={classes.flex_row}>
                   <Input ref={nameRef} lottie={name_lottie} title="Name" required placeholder="John Doe" />
@@ -72,7 +81,8 @@ export default function ContactSection() {
                <Input ref={emailRef} lottie={email_lottie} title="Email" required placeholder="johndoe@gmail.com" />
                <Input ref={msgRef} lottie={message_lottie} title="Message" required placeholder="hi there!" area />
 
-               <div className={classes.flex_end}>
+               <div className={classes.flex_btwn}>
+                  <SocialLinks showSm />
                   <Button loading={loading} fw onClick={handleSendMessage}>
                      Send
                   </Button>
@@ -82,6 +92,22 @@ export default function ContactSection() {
 
          {success && <SuccessPopup />}
          <Toaster />
+      </div>
+   );
+}
+
+function SocialLinks({ showSm }: { showSm?: boolean }) {
+   return (
+      <div className={`${classes.icons_box} ${showSm ? classes.showSm : null}`}>
+         <a href="#" className={classes.link}>
+            <IconAt size={18} className={classes.link_icon} />
+         </a>
+         <a href="#" className={classes.link}>
+            <IconBrandInstagram size={18} className={classes.link_icon} />
+         </a>
+         <a href="#" className={classes.link}>
+            <IconBrandLinkedin size={18} className={classes.link_icon} />
+         </a>
       </div>
    );
 }
