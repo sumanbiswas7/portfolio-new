@@ -14,7 +14,7 @@ import { SuccessPopup } from "../popup/success-popup";
 import { sendEmail } from "../../server/send-email";
 import { StatusCode } from "../../utils/http_response";
 
-export function ContactSection() {
+export default function ContactSection() {
    const [loading, setLoading] = useState(false);
    const [success, setSuccess] = useState(false);
 
