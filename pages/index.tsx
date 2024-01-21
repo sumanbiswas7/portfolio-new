@@ -6,6 +6,7 @@ import { WorkSection } from "../components/sections/work";
 import { StickyBar } from "../components/sticky-bar/sticky-bar";
 import classes from "../styles/home.module.scss";
 import Navbar from "../components/navbar/navbar";
+import { SkillsSection } from "../components/sections/skills";
 
 const ContactNoSSR = dynamic(() => import("../components/sections/contact"), {
    ssr: false,
@@ -22,6 +23,7 @@ export default function Home() {
          <div className={classes.content}>
             <HomeSection />
             <AboutSection />
+            <SkillsSection skillsPage />
             <WorkSection />
             <ContactNoSSR />
          </div>
