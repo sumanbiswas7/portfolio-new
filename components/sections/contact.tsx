@@ -17,6 +17,7 @@ import { FollowMe } from "../card/follow-me";
 import { IconAt } from "@tabler/icons-react";
 import { IconBrandInstagram } from "@tabler/icons-react";
 import { IconBrandLinkedin } from "@tabler/icons-react";
+import { LINKS } from "../../data/social-links";
 
 export default function ContactSection() {
    const [loading, setLoading] = useState(false);
@@ -99,13 +100,13 @@ export default function ContactSection() {
 function SocialLinks({ showSm }: { showSm?: boolean }) {
    return (
       <div className={`${classes.icons_box} ${showSm ? classes.showSm : null}`}>
-         <a href="#" className={classes.link}>
+         <a href={LINKS.MAILTO} className={classes.link}>
             <IconAt size={18} className={classes.link_icon} />
          </a>
-         <a href="#" className={classes.link}>
+         <a href={LINKS.INSTA} className={classes.link}>
             <IconBrandInstagram size={18} className={classes.link_icon} />
          </a>
-         <a href="#" className={classes.link}>
+         <a href={LINKS.LINKED} className={classes.link}>
             <IconBrandLinkedin size={18} className={classes.link_icon} />
          </a>
       </div>

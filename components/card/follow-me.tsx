@@ -1,3 +1,4 @@
+import { LINKS } from "../../data/social-links";
 import classes from "./follow-me.module.scss";
 
 export function FollowMe() {
@@ -5,7 +6,7 @@ export function FollowMe() {
       <div className={classes.desc_box}>
          <p className={classes.desc}>
             If you want to see more pictures like behind, do not forget to follow me on{" "}
-            <a href="https://www.instagram.com/sumanbiswas7" target="_blank">
+            <a href={LINKS.INSTA} target="_blank">
                instagram
             </a>{" "}
             :)

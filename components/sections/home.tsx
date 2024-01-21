@@ -3,9 +3,12 @@ import classes from "./home.module.scss";
 import { Hamburger } from "../ui/hamburger";
 import { Button } from "../ui/button";
 import { IconCertificate, IconMessageShare } from "@tabler/icons-react";
-import { StickyBar } from "../sticky-bar/sticky-bar";
+import { LINKS } from "../../data/social-links";
 
 export function HomeSection() {
+   const toContactMe = () => window.open(LINKS.MAILTO, "_blank");
+   const toResume = () => window.open(LINKS.RESUME, "_blank");
+
    return (
       <div className={classes.container}>
          <Link href={"/"}>
@@ -28,10 +31,10 @@ export function HomeSection() {
                <p>@Web-Wizards, @PlausibilitySolutions</p>
 
                <div className={classes.btn_cont}>
-                  <Button vw icon={<IconMessageShare color="#222" size={18} />}>
+                  <Button onClick={toContactMe} vw icon={<IconMessageShare color="#222" size={18} />}>
                      Contact Me
                   </Button>
-                  <Button vw icon={<IconCertificate color="#ededed" size={18} />} variant="outlined">
+                  <Button onClick={toResume} vw icon={<IconCertificate color="#ededed" size={18} />} variant="outlined">
                      Resume
                   </Button>
                </div>
