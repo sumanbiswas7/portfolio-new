@@ -1,14 +1,16 @@
 import React, { ButtonHTMLAttributes } from "react";
 import classes from "./button.module.scss";
+import { Loader } from "./loader";
 
-export function Button({ variant, icon, vw, children, ...rest }: ButtonProps) {
+export function Button({ variant, loading, icon, vw, children, ...rest }: ButtonProps) {
    return (
       <button
          {...rest}
+         disabled={loading}
          className={`${classes.button} ${vw ? classes.vw : null} ${variant === "outlined" ? classes.outlined : classes.filled}`}
       >
          {icon}
-         {children}
+         {loading ? <Loader /> : children}
       </button>
    );
 }
@@ -19,4 +21,5 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
    children?: React.ReactNode;
    vw?: boolean;
    fw?: boolean;
+   loading?: boolean;
 }

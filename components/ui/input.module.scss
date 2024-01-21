@@ -38,6 +38,13 @@
       box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.05);
    }
 
+   /* Optional: If needed, you can also hide the arrows in Webkit browsers */
+   input[type="number"]::-webkit-inner-spin-button,
+   input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+   }
+
    textarea {
       max-height: 7rem;
       min-height: 5rem;

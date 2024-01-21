@@ -23,6 +23,11 @@
    &:active {
       transform: translateY(2px);
    }
+
+   &:disabled {
+      color: #666666;
+      cursor: not-allowed;
+   }
 }
 
 .vw {
