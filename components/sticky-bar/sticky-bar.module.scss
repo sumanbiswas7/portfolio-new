@@ -17,7 +17,7 @@
    background: rgba(106, 106, 106, 0.2);
    backdrop-filter: blur(2px);
    padding: 0.5rem 1rem;
-   transition: all 0.5s;
+   transition: all 0.25s;
 
    &:hover {
       border: 1px solid rgba(255, 255, 255, 0.5);
@@ -33,7 +33,7 @@
 
    .icon_btn {
       @include flex-center;
-      transition: all 0.25s;
+      transition: all 0.15s;
       cursor: pointer;
       color: #878787;
 
@@ -44,7 +44,7 @@
          // background-color: rgba(255, 255, 255, 0.2);
          // border-radius: 50%;
          color: rgba(255, 255, 255, 0.85);
-         transform: translateY(-2px) scale(1.1);
+         // transform: translateY(-2px) scale(1.1);
       }
    }
 }

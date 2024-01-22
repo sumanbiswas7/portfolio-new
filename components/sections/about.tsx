@@ -1,5 +1,6 @@
 import { SectionTitle } from "../ui/section-title";
 import classes from "./about.module.scss";
+import { motion } from "framer-motion";
 
 export function AboutSection() {
    return (
@@ -8,8 +9,13 @@ export function AboutSection() {
          <img src="/about/bg-texture.svg" className={classes.texture} />
 
          <div className={classes.centered_div}>
-            <img src="/about/me.webp" />
-            <div className={classes.txt_box}>
+            <motion.img transition={{ duration: 1 }} initial={{ x: -30 }} whileInView={{ x: 0 }} src="/about/me.webp" />
+            <motion.div
+               transition={{ duration: 2.5 }}
+               className={classes.txt_box}
+               initial={{ opacity: 0 }}
+               whileInView={{ opacity: 1 }}
+            >
                <h3>Hello</h3>
                <br />
                <p>
@@ -22,7 +28,7 @@ export function AboutSection() {
                   Apart from coding, I'm all about football, especially cheering for Real Madrid. When I'm not on the
                   field, you'll catch me snapping pics or planning my next adventure.
                </p>
-            </div>
+            </motion.div>
          </div>
       </div>
    );

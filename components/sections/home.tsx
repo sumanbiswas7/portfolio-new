@@ -1,9 +1,9 @@
 import Link from "next/link";
 import classes from "./home.module.scss";
-import { Hamburger } from "../ui/hamburger";
 import { Button } from "../ui/button";
 import { IconCertificate, IconMessageShare } from "@tabler/icons-react";
 import { LINKS } from "../../data/social-links";
+import { motion } from "framer-motion";
 
 export function HomeSection() {
    const toContactMe = () => window.open(LINKS.MAILTO, "_blank");
@@ -16,12 +16,29 @@ export function HomeSection() {
          </Link>
 
          <div className={classes.left_box}>
-            <div className={classes.img_circle}>
-               <img src="/home/suman.webp" className={classes.suman_img} />
-            </div>
+            <motion.div
+               className={classes.img_circle}
+               transition={{ duration: 0.5 }}
+               initial={{ y: 20 }}
+               whileInView={{ y: 0 }}
+            >
+               <motion.img
+                  // transition={{ duration: 0.5 }}
+                  // initial={{ scale: 0.8 }}
+                  // whileInView={{ scale: 1 }}
+                  // whileHover={{ y: 20 }}
+                  src="/home/suman.webp"
+                  className={classes.suman_img}
+               />
+            </motion.div>
          </div>
          <div className={classes.right_box}>
-            <div className={classes.right_center_cont}>
+            <motion.div
+               transition={{ duration: 0.5 }}
+               initial={{ opacity: 0, x: 30 }}
+               whileInView={{ opacity: 1, x: 0 }}
+               className={classes.right_center_cont}
+            >
                <h1>
                   SUMAN <br />
                   BISWAS.
@@ -38,7 +55,7 @@ export function HomeSection() {
                      Resume
                   </Button>
                </div>
-            </div>
+            </motion.div>
          </div>
       </div>
    );

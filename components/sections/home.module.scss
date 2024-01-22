@@ -38,13 +38,13 @@
          backdrop-filter: blur(2px);
          position: relative;
          margin-bottom: -15vh;
-         animation: circle-load 2s;
+         // animation: circle-load 2s;
 
          .suman_img {
             width: 100%;
             position: absolute;
             bottom: 0;
-            animation: load-img 1s;
+            // animation: load-img 1s;
          }
 
          @keyframes circle-load {
