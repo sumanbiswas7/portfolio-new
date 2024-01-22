@@ -1,6 +1,7 @@
 import Link from "next/link";
 import classes from "./navlink.module.scss";
 import { IconBuilding, IconHome, IconPhoneCall, IconTool, IconUser } from "@tabler/icons-react";
+import { motion } from "framer-motion";
 
 interface Props {
    title: string;
@@ -33,10 +34,10 @@ export function Links() {
 export function NavLink({ title, link, children }: Props) {
    return (
       <Link href={link} className={classes.a}>
-         <div className={classes.link_container}>
+         <motion.div whileHover={{ x: 10 }} className={classes.link_container}>
             <div className={classes.icon_container}>{children}</div>
             <p className={classes.link}>{title}</p>
-         </div>
+         </motion.div>
       </Link>
    );
 }
