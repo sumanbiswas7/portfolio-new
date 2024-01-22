@@ -5,6 +5,8 @@
 .new_page {
    @include section;
    @include flex-center;
+   height: 100vh;
+
    * {
       font-family: "Fira Code", monospace;
       font-size: 0.8rem;
@@ -22,7 +24,7 @@
    overflow: hidden;
 
    @media only screen and (orientation: portrait) {
-      height: 80%;
+      height: 75%;
       margin-inline: 1rem;
    }
    //   background-color: #fff;
