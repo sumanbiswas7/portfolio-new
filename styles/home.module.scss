@@ -2,7 +2,6 @@
 
 .main {
    position: relative;
-   scroll-behavior: smooth;
 }
 
 // fixed background gradient for all sections
@@ -17,4 +16,8 @@
 .content {
    position: absolute;
    z-index: 2;
+}
+
+.home {
+   scroll-behavior: smooth;
 }
