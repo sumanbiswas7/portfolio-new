@@ -1,0 +1,43 @@
+@import "../../styles/constants.scss";
+@import "../../styles/helpers.scss";
+
+// Navbar links
+.link_container {
+   @include flex-center;
+   justify-content: flex-start;
+   margin-bottom: 1rem;
+   &:hover .icon {
+      color: #fff;
+   }
+   &:hover .icon_container {
+      background-color: #1d1d1d;
+      // transform: translateX(0.5rem);
+   }
+   &:hover .link {
+      // transform: translateX(0.5rem);
+   }
+}
+.link {
+   font-size: 1.3rem;
+   margin-left: 0.5rem;
+   color: #fff;
+   // transition: all 0.3s;
+}
+.icon_container {
+   $size: 1.9rem;
+   width: $size;
+   height: $size;
+   @include flex-center;
+   border-radius: 0.5rem;
+   background-color: #fff;
+   fill: #1d1d1d;
+   transition: all 0.3s;
+}
+.icon {
+   transition: all 0.3s;
+   color: #1d1d1d;
+}
+
+.a {
+   text-decoration: none;
+}

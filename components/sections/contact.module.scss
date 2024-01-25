@@ -1,0 +1,118 @@
+@import "../../styles/helpers.scss";
+@import "../../styles/constants.scss";
+
+.container {
+   @include section;
+   @include flex-center;
+
+   @media only screen and (max-width: $bp-sm-2) {
+      display: block;
+   }
+}
+
+.centered_div {
+   @include flex-center;
+   border-radius: 1rem;
+   border: 1px solid #6f6f6f;
+   background: rgba(47, 47, 47, 0.5);
+   backdrop-filter: blur(2px);
+   overflow: hidden;
+   box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.05);
+
+   @media only screen and (max-width: $bp-sm-2) {
+      flex-direction: column;
+      border-radius: 0;
+      border: none;
+      box-shadow: none;
+   }
+}
+
+.flex_row {
+   display: flex;
+   gap: 0.5rem;
+}
+
+$size: 25vw;
+.img_div {
+   width: $size;
+   min-height: $size * 1.45;
+   position: relative;
+
+   background-position: center;
+   background-size: cover;
+   background-image: url("../../public/contact/bg.webp");
+
+   .overlay_img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.15);
+      @include flex-center;
+      justify-content: space-around;
+      flex-direction: column;
+   }
+
+   @media only screen and (max-width: $bp-lg) {
+      height: 22rem;
+   }
+
+   @media only screen and (max-width: $bp-sm-2) {
+      height: 40vh;
+      width: 100%;
+   }
+}
+
+.icons_box {
+   @include flex-center;
+   gap: 0.5rem;
+
+   @media only screen and (max-width: 600px) {
+      display: none;
+   }
+
+   .link {
+      @include flex-center;
+      width: 2.25rem;
+      height: 2.25rem;
+      background-color: #fff;
+      border-radius: 50%;
+      box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.2);
+      .link_icon {
+         color: #474747;
+      }
+   }
+}
+
+.showSm {
+   display: none;
+
+   @media only screen and (max-width: 600px) {
+      display: flex;
+
+      .link {
+         width: 2rem;
+         height: 2rem;
+      }
+   }
+}
+
+.form {
+   padding: 1rem;
+   min-width: $size * 1.5;
+
+   @media only screen and (max-width: $bp-lg) {
+      min-width: $size * 2;
+   }
+
+   @media only screen and (max-width: $bp-sm-2) {
+      width: 100%;
+      min-height: 60vh;
+   }
+}
+
+.flex_btwn {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}

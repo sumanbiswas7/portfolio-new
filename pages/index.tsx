@@ -1,55 +1,40 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.scss";
-import { About } from "../components/About/About";
-import { HomePage } from "../components/Home/HomePage";
-import { Projects } from "../components/Project/Projects";
+// import { usePreloader } from "../hooks/usePreloader";
+import { GoogleAnalytics } from "../lib/google-analytics";
+
 import dynamic from "next/dynamic";
-import { Terminal } from "../components/Terminal/Terminal";
-const ContactNoSSR = dynamic(() => import("../components/Contact/Contact"), {
-  ssr: false,
+import classes from "../styles/home.module.scss";
+import Navbar from "../components/navbar/navbar";
+
+import { AboutSection } from "../components/sections/about";
+import { HomeSection } from "../components/sections/home";
+import { WorkSection } from "../components/sections/work";
+import { StickyBar } from "../components/sticky-bar/sticky-bar";
+import { SkillsSection } from "../components/sections/skills";
+// import { PreLoader } from "../components/loader/loader";
+import initFirstLoad from "../server/first-load";
+const ContactNoSSR = dynamic(() => import("../components/sections/contact"), {
+   ssr: false,
 });
 
 export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Suman Biswas</title>
-        <meta
-          name="description"
-          content="This is portfolio website of Suman Biswas who is a student and a developer"
-        />
-        <link
-          rel="icon"
-          href="/favicon-white.svg"
-          media="(prefers-color-scheme: dark)"
-        />
-        <link
-          rel="icon"
-          href="/favicon.svg"
-          media="(prefers-color-scheme: light)"
-        />
+   // const { loading } = usePreloader();
+   initFirstLoad();
 
-        <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_KEY}`}
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];
-             function gtag(){dataLayer.push(arguments);}
-             gtag('js', new Date()); 
-             gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_KEY}');`,
-          }}
-        ></script>
-      </Head>
+   // if (loading) return <PreLoader />;
+   return (
+      <main className={classes.main}>
+         <GoogleAnalytics />
+         <div className={classes.bg_gradient} />
+         <Navbar />
+         <StickyBar />
 
-      <div className={styles.page_container}>
-        <HomePage />
-        <About />
-        <Terminal skillsPage />
-        <Projects />
-        <ContactNoSSR />
-      </div>
-    </div>
-  );
+         <div className={classes.content}>
+            <HomeSection />
+            <AboutSection />
+            <SkillsSection skillsPage />
+            <WorkSection />
+            <ContactNoSSR />
+         </div>
+      </main>
+   );
 }

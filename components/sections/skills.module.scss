@@ -1,0 +1,173 @@
+@import "../../styles/helpers.scss";
+@import "../../styles/constants.scss";
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+
+.new_page {
+   @include section;
+   @include flex-center;
+   height: 100vh;
+
+   * {
+      font-family: "Fira Code", monospace;
+      font-size: 0.8rem;
+   }
+}
+.link_social {
+   color: #fff;
+}
+
+// terminal
+.terminal_container {
+   width: 40rem;
+   height: 30rem;
+   border-radius: 1.5rem;
+   overflow: hidden;
+
+   @media only screen and (orientation: portrait) {
+      height: 75%;
+      margin-inline: 1rem;
+   }
+   //   background-color: #fff;
+
+   // terminal-head section
+   & > .terminal_box_head {
+      width: 100%;
+      height: 10%;
+      background-color: #545454;
+      @include flex-center;
+      justify-content: flex-start;
+
+      & > .head_circle {
+         background-color: #dadada;
+         width: 0.8em;
+         height: 0.8em;
+         margin-right: 0.4em;
+         border-radius: 50%;
+         transition: all 0.2s;
+      }
+      & > .head_circle:nth-child(1) {
+         margin-left: 1.5em;
+         &:hover {
+            background-color: #ff7070;
+         }
+         &:hover ~ #img_reveal {
+            display: block;
+            background-image: url("https://i.gifer.com/bf6.gif");
+         }
+      }
+      & > .head_circle:nth-child(2) {
+         &:hover {
+            background-color: #ffb35a;
+         }
+         &:hover ~ #img_reveal {
+            display: block;
+            background-image: url("/skills/egg-2.gif");
+         }
+      }
+      & > .head_circle:nth-child(3) {
+         &:hover {
+            background-color: #7dff7a;
+         }
+         &:hover ~ #img_reveal {
+            display: block;
+            background-image: url("/skills/rabbit-animated.gif");
+         }
+      }
+      #img_reveal {
+         display: none;
+         height: 5rem;
+         width: 5rem;
+         position: absolute;
+         top: 1rem;
+         left: 1rem;
+         background-image: url("/skills/rabbit-animated.gif");
+         // background-image: url("https://tenor.com/view/cat-cats-gif-18978734");
+         background-size: cover;
+      }
+   }
+
+   // terminal-content (main input transparent)
+   & > .terminal_box_content {
+      width: 100%;
+      height: 90%;
+
+      // background-color: rgba(73, 73, 73, 0.5);
+      background: linear-gradient(
+         290deg,
+         rgba(170, 250, 200, 0.15),
+         rgba(200, 170, 250, 0.15),
+         rgba(250, 250, 170, 0.15),
+         rgba(270, 150, 170, 0.15)
+      );
+      background-size: 600% 600%;
+      animation: mesh-animation 10s ease infinite;
+
+      @keyframes mesh-animation {
+         0% {
+            background-position: 0% 2%;
+         }
+         50% {
+            background-position: 100% 99%;
+         }
+         100% {
+            background-position: 0% 2%;
+         }
+      }
+
+      padding: 1rem;
+      overflow-y: scroll;
+
+      & > .inp_prefix {
+         color: #4fff75;
+         font-size: 0.8rem;
+         margin-right: 0.4rem;
+         margin-top: 0.5rem;
+         position: relative;
+
+         & > span {
+            margin-left: 0.2rem;
+            color: #fff;
+         }
+      }
+
+      #nodollar {
+         &::before {
+            display: none;
+         }
+      }
+      #dollar {
+         position: relative;
+         &::before {
+            content: "";
+            width: 1px;
+            height: 0.95rem;
+            background-color: #fff;
+            top: 2px;
+            right: -0.5rem;
+            position: absolute;
+            animation: blink 1s infinite;
+            transition: none;
+         }
+      }
+      @keyframes blink {
+         0% {
+            opacity: 0;
+         }
+         50% {
+            opacity: 1;
+         }
+         100% {
+            opacity: 0;
+         }
+      }
+
+      & > .term_input {
+         background-color: rgba(#000, 0);
+         outline: none;
+         border: none;
+         color: #fff;
+         margin-bottom: 0.5rem;
+         font-size: 0.8rem;
+      }
+   }
+}

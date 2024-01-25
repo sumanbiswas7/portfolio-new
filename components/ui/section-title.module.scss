@@ -1,0 +1,18 @@
+@import "../../styles/helpers.scss";
+
+.flex_row {
+   @include flex-center;
+   position: absolute;
+   left: 1rem;
+   top: 1rem;
+   z-index: 2;
+
+   .icon_cont {
+      @include flex-center;
+   }
+
+   & > p {
+      color: #fff;
+      font-size: 1.5rem;
+   }
+}

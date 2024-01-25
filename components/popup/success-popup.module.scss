@@ -1,0 +1,34 @@
+@import "../../styles/helpers.scss";
+
+.full_screen_overlay {
+   width: 100vw;
+   height: 100vh;
+   background-color: rgba(0, 0, 0, 0.25);
+   position: absolute;
+   top: 0;
+   left: 0;
+   backdrop-filter: blur(2px);
+   @include flex-center;
+   z-index: 3;
+}
+
+.modal {
+   @include flex-center;
+   flex-direction: column;
+   padding: 1rem 4rem;
+   border: 1px solid;
+   border-color: rgba(100, 100, 100, 1);
+   background-color: rgba(70, 70, 70, 1);
+   backdrop-filter: blur(5px);
+   border-radius: 0.65rem;
+   color: #fff;
+
+   & > p {
+      font-size: 1.25rem;
+      font-weight: 500;
+   }
+}
+
+.lottie {
+   width: 6rem;
+}

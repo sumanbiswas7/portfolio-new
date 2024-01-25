@@ -1,9 +1,0 @@
-@import "../../styles/helpers.scss";
-
-.container {
-  @include flex-center;
-  width: 100vw;
-  height: 100vh;
-  background-color: #585858;
-  color: rgba(#fff, 0.7);
-}

@@ -1,0 +1,74 @@
+.help_box {
+   color: #fff;
+   font-size: 0.8rem;
+   margin-bottom: 0.5rem;
+}
+
+$color-0: #4fffd5;
+
+$color-1: #d45bff;
+$color-2: #8995ff;
+$color-3: #ff7d54;
+
+$color-4: #ff6565;
+$color-5: #4fff75;
+
+.col_0 {
+   color: $color-0;
+}
+.col_1 {
+   color: $color-1;
+}
+.col_2 {
+   color: $color-2;
+}
+.col_3 {
+   color: $color-3;
+}
+.col_4 {
+   color: $color-4;
+}
+.col_5 {
+   color: $color-5;
+}
+.skills_content {
+   padding-left: 1rem;
+}
+.skills_head {
+   margin-bottom: 1rem;
+   color: #fff;
+}
+
+// Type help
+.typehelp {
+   font-size: 0.8rem;
+   color: #fff;
+
+   & > span {
+      color: $color-4;
+   }
+}
+
+// help component
+.help_cmd {
+   color: #fff;
+   margin-bottom: 0.5rem;
+}
+
+// about command
+.about_cmd {
+   color: #fff;
+   margin-bottom: 0.5rem;
+}
+
+// error command
+.error_cmd {
+   color: #fff;
+   margin-block: 0.5rem;
+}
+
+// contact command
+.contact_cmd {
+   color: #fff;
+   margin-bottom: 0.5rem;
+}

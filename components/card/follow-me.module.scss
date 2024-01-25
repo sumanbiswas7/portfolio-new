@@ -1,0 +1,46 @@
+.flex_row {
+   display: flex;
+   gap: 0.5rem;
+}
+
+.desc_box {
+   border-radius: 1rem;
+   border: 1px solid #5b5b5b;
+   background: rgba(53, 53, 53, 0.6);
+   backdrop-filter: blur(5px);
+   font-size: 0.85rem;
+   color: #fff;
+   padding: 2rem;
+
+   @media only screen and (max-width: 1075px) {
+      display: none;
+   }
+   @media only screen and (max-width: 600px) {
+      display: block;
+   }
+
+   .desc {
+      margin-bottom: 0.85rem;
+      width: 25ch;
+
+      a {
+         color: inherit;
+      }
+   }
+
+   .me {
+      width: 2rem;
+   }
+
+   .name_box {
+      font-weight: 600;
+
+      // & > p:nth-child(1) {
+      // }
+
+      & > p:nth-child(2) {
+         font-size: 0.7rem;
+         color: rgba(255, 255, 255, 0.65);
+      }
+   }
+}
