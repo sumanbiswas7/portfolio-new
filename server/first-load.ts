@@ -1,11 +1,15 @@
-import { useEffect } from "react";
-import { database } from "./firebase";
+import { useContext, useEffect } from "react";
+import { database } from "../lib/firebase";
 import { goOnline, get, ref, set } from "firebase/database";
+import { FirstLoadContext } from "../providers/first-load";
 
 export default function initFirstLoad() {
+   const [firstLoad, setFirstLoad] = useContext<any>(FirstLoadContext);
+
    useEffect(() => {
-      //   if (!firstLoad.loaded) {}
-      initLoad(); // gets view, updates view count
+      if (!firstLoad.loaded) {
+         initLoad(); // gets view, updates view count
+      }
    }, []);
 
    async function initLoad() {
@@ -13,6 +17,7 @@ export default function initFirstLoad() {
          goOnline(database);
          const data = await get(ref(database, "/views"));
          const views = data.val().views || 0;
+         setFirstLoad({ views: views + 1, loaded: true });
          updateViews(views);
       } catch (error) {
          console.log("initLoad():", error);

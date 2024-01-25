@@ -1,4 +1,4 @@
-import { usePreloader } from "../hooks/usePreloader";
+// import { usePreloader } from "../hooks/usePreloader";
 import { GoogleAnalytics } from "../lib/google-analytics";
 
 import dynamic from "next/dynamic";
@@ -10,16 +10,17 @@ import { HomeSection } from "../components/sections/home";
 import { WorkSection } from "../components/sections/work";
 import { StickyBar } from "../components/sticky-bar/sticky-bar";
 import { SkillsSection } from "../components/sections/skills";
-import { PreLoader } from "../components/loader/loader";
+// import { PreLoader } from "../components/loader/loader";
+import initFirstLoad from "../server/first-load";
 const ContactNoSSR = dynamic(() => import("../components/sections/contact"), {
    ssr: false,
 });
 
 export default function Home() {
-   const { loading } = usePreloader();
+   // const { loading } = usePreloader();
+   initFirstLoad();
 
-   if (loading) return <PreLoader />;
-
+   // if (loading) return <PreLoader />;
    return (
       <main className={classes.main}>
          <GoogleAnalytics />

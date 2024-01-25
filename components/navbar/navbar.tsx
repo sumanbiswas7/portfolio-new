@@ -1,9 +1,11 @@
 import classes from "./navbar.module.scss";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Links } from "./navlink";
 import { Copyright } from "./copyright";
+import { FirstLoadContext } from "../../providers/first-load";
 
 export default function Navbar() {
+   const [firstLoad] = useContext<any>(FirstLoadContext);
    const [modal, setModal] = useState(false);
    const handleModalClick = () => setModal((p) => !p);
 
@@ -18,7 +20,7 @@ export default function Navbar() {
             <div className={classes.modal}>
                <p>Quick Links</p>
                <Links />
-               <Copyright views={0} />
+               <Copyright views={firstLoad?.views || 0} />
             </div>
          )}
       </>
