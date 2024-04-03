@@ -44,8 +44,8 @@ export function HomeSection() {
                   BISWAS.
                </h1>
                <h1 className={classes.sm_head}>SUMAN BISWAS</h1>
-               <p>FullStack Developer</p>
-               <p>@Web-Wizards, @PlausibilitySolutions</p>
+               <p>FullStack Engineer</p>
+               <p>@CloudChef-Inc || Prev. @WebWizs, P.Sols</p>
 
                <div className={classes.btn_cont}>
                   <Button onClick={toContactMe} vw icon={<IconMessageShare color="#222" size={18} />}>
